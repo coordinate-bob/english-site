@@ -1,0 +1,303 @@
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --warn: #dc2626;
+  --bg: #f1f5f9;
+  --card: #ffffff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.site-header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px 0;
+}
+
+.site-header h1 { font-size: 22px; margin-bottom: 12px; }
+
+.tabs { display: flex; gap: 4px; }
+
+.tab-btn {
+  border: none;
+  background: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  color: var(--muted);
+  border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover { color: var(--primary); }
+
+.tab-btn.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  font-weight: 600;
+}
+
+main { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.card h2 { font-size: 17px; margin-bottom: 12px; }
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.toolbar select {
+  font-size: 14px;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.muted { color: var(--muted); }
+.small { font-size: 12px; }
+.hidden { display: none !important; }
+.center { text-align: center; padding: 40px 20px; }
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 15px;
+  cursor: pointer;
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn:hover { background: var(--primary-dark); }
+.btn:disabled { background: #cbd5e1; cursor: not-allowed; }
+
+.btn-small { padding: 6px 14px; font-size: 13px; }
+.btn-danger { background: var(--warn); }
+.btn-danger:hover { background: #b91c1c; }
+.btn-warn { background: #f59e0b; }
+.btn-warn:hover { background: #d97706; }
+.btn-ghost {
+  background: #eef2ff;
+  color: var(--primary);
+}
+.btn-ghost:hover { background: #e0e7ff; }
+.btn-icon {
+  background: #eef2ff;
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.progress-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.progress-bar {
+  height: 10px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--primary);
+  border-radius: 999px;
+  transition: width .3s;
+}
+
+.word-card { text-align: center; padding: 32px 20px; }
+
+.word-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.word-text { font-size: 36px; font-weight: 700; }
+
+.phonetic { color: var(--muted); font-size: 18px; margin-bottom: 4px; }
+.pos { color: var(--primary); font-size: 14px; margin-bottom: 12px; }
+
+.meaning {
+  font-size: 17px;
+  margin: 16px auto 4px;
+  max-width: 560px;
+  text-align: left;
+}
+
+.word-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.word-actions .btn { min-width: 130px; }
+
+#word-due-hint { margin-top: 14px; }
+
+/* 每日听力 */
+.today-item { display: flex; flex-direction: column; gap: 6px; }
+.today-item .badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: #eef2ff;
+  color: var(--primary);
+  width: fit-content;
+}
+
+.today-item h3 { font-size: 19px; }
+
+.today-actions { display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap; }
+
+.link-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 15px;
+}
+
+.streak-text { margin-top: 12px; font-size: 14px; }
+
+.week-list { list-style: none; }
+.week-list li {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: baseline;
+  font-size: 14px;
+}
+.week-list li:last-child { border-bottom: none; }
+.week-date { color: var(--muted); min-width: 88px; }
+.week-today .week-title { font-weight: 700; }
+
+/* 资源导航 */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.resource-card h2 {
+  font-size: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary);
+  margin-bottom: 12px;
+  color: var(--primary);
+}
+
+.resource-card ul { list-style: none; }
+.resource-card li { margin-bottom: 10px; }
+.resource-card a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.resource-card a:hover { color: var(--primary); text-decoration: underline; }
+.resource-card p { font-size: 12px; color: var(--muted); }
+
+/* 统计 */
+.stats-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.stat-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  text-align: center;
+}
+
+.stat-box .num { font-size: 26px; font-weight: 700; color: var(--primary); }
+.stat-box .label { font-size: 13px; color: var(--muted); }
+
+.heatmap {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(7, 13px);
+  gap: 3px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.cell {
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  background: #ebedf0;
+}
+.level-0 { background: #ebedf0; }
+.level-1 { background: #bfdbfe; }
+.level-2 { background: #60a5fa; }
+.level-3 { background: #2563eb; }
+.level-4 { background: #1e3a8a; }
+
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+}
+.heatmap-legend .cell { width: 11px; height: 11px; }
+
+/* 窄屏 */
+@media (max-width: 560px) {
+  .site-header h1 { font-size: 18px; }
+  .tab-btn { padding: 8px 12px; font-size: 14px; }
+  .word-text { font-size: 28px; }
+  .toolbar { gap: 8px; }
+}
+
+.load-error {
+  max-width: 860px;
+  margin: 24px auto;
+  padding: 16px 20px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  border-radius: var(--radius);
+  font-size: 14px;
+}
+.load-error code { background: #fee2e2; padding: 1px 5px; border-radius: 4px; }

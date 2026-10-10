@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的英语学习站</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>📚 我的英语学习站</h1>
+    <nav class="tabs" id="tab-nav">
+      <button class="tab-btn active" data-tab="words">背单词</button>
+      <button class="tab-btn" data-tab="listening">每日听力</button>
+      <button class="tab-btn" data-tab="resources">资源导航</button>
+      <button class="tab-btn" data-tab="stats">我的统计</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Tab 1 背单词 -->
+    <section id="tab-words" class="tab-panel active">
+      <div class="load-error hidden" id="words-error"></div>
+      <div class="toolbar card">
+        <label for="lib-select">词库：</label>
+        <select id="lib-select">
+          <option value="cet4">四级（3846 词）</option>
+          <option value="cet6">六级（1956 词）</option>
+        </select>
+        <span id="lib-progress-text" class="muted"></span>
+        <button id="reset-btn" class="btn btn-danger btn-small">重置数据</button>
+      </div>
+
+      <div class="card" id="task-card">
+        <div class="progress-row">
+          <span id="task-label">今日任务</span>
+          <span id="task-count" class="muted"></span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="task-fill"></div></div>
+      </div>
+
+      <div class="card word-card" id="word-card">
+        <div class="word-head">
+          <span id="word-text" class="word-text"></span>
+          <button id="speak-btn" class="btn btn-icon" title="朗读">🔊</button>
+        </div>
+        <div id="word-phonetic" class="phonetic"></div>
+        <div id="word-pos" class="pos"></div>
+        <button id="show-meaning-btn" class="btn btn-ghost">显示释义</button>
+        <div id="word-meaning" class="meaning hidden"></div>
+        <div class="word-actions">
+          <button id="know-btn" class="btn btn-primary">✅ 认识</button>
+          <button id="unknow-btn" class="btn btn-warn">❌ 不认识</button>
+        </div>
+        <div id="word-due-hint" class="muted small"></div>
+      </div>
+
+      <div class="card center hidden" id="done-card">
+        <p>🎉 今日任务已完成！</p>
+        <p class="muted">明天再来，到期单词会自动进入复习队列。</p>
+      </div>
+    </section>
+
+    <!-- Tab 2 每日听力 -->
+    <section id="tab-listening" class="tab-panel">
+      <div class="card" id="today-listening"></div>
+      <div class="card">
+        <h2>本周 7 天推荐</h2>
+        <ul id="week-list" class="week-list"></ul>
+      </div>
+    </section>
+
+    <!-- Tab 3 资源导航 -->
+    <section id="tab-resources" class="tab-panel">
+      <div id="resource-grid" class="resource-grid"></div>
+    </section>
+
+    <!-- Tab 4 我的统计 -->
+    <section id="tab-stats" class="tab-panel">
+      <div class="stats-summary" id="stats-summary"></div>
+      <div class="card">
+        <h2>近一年学习热力图</h2>
+        <div class="heatmap" id="heatmap"></div>
+        <div class="heatmap-legend muted small">
+          少
+          <span class="cell level-0"></span>
+          <span class="cell level-1"></span>
+          <span class="cell level-2"></span>
+          <span class="cell level-3"></span>
+          <span class="cell level-4"></span>
+          多
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

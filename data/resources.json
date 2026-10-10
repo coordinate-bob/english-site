@@ -1,0 +1,59 @@
+[
+ {
+  "category": "历年真题",
+  "items": [
+   { "name": "中国教育考试网（四六级官网）", "desc": "教育部考试中心官网，查考试介绍、大纲与官方通知", "url": "https://cet.neea.edu.cn/" },
+   { "name": "中国教育考试网：考试大纲", "desc": "全国大学英语四、六级考试大纲与考核要求原文", "url": "https://cet.neea.edu.cn/html1/folder/19081/5124-1.htm" },
+   { "name": "可可英语·四级真题", "desc": "历年四级真题听力原文、答案与音频，免费在线做", "url": "https://www.kekenet.com/cet4/" },
+   { "name": "可可英语·六级真题", "desc": "历年六级真题听力原文、答案与音频，免费在线做", "url": "https://www.kekenet.com/cet6/" },
+   { "name": "考试点·四六级频道", "desc": "四六级历年真题下载与备考课程汇总", "url": "https://www.kaoshidian.com/cet/" }
+  ]
+ },
+ {
+  "category": "听力",
+  "items": [
+   { "name": "BBC 6 Minute English", "desc": "BBC 王牌六分钟英语播客，语速适中，带文本和词汇讲解", "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2025" },
+   { "name": "VOA Learning English", "desc": "VOA 慢速英语，每日新闻与教学节目，适合精听", "url": "https://learningenglish.voanews.com/" },
+   { "name": "可可英语听力频道", "desc": "VOA、BBC、影视、考试听力材料大全", "url": "https://www.kekenet.com/radio/" },
+   { "name": "在线英语听力室", "desc": "老牌听力网站，慢速到常速材料分级齐全", "url": "https://www.tingroom.com/" },
+   { "name": "Randall's ESL Cyber Listening Lab", "desc": "按难度分级的英语听力实验室，配练习题", "url": "https://www.esl-lab.com/" }
+  ]
+ },
+ {
+  "category": "阅读",
+  "items": [
+   { "name": "China Daily 中国日报网", "desc": "英文新闻主流门户，四六级阅读题材重要来源", "url": "https://www.chinadaily.com.cn/" },
+   { "name": "纽约时报中文网", "desc": "中英对照阅读，适合进阶提升长难句", "url": "https://cn.nytimes.com/" },
+   { "name": "The Guardian 卫报", "desc": "英国主流大报，观点与深度报道适合精读", "url": "https://www.theguardian.com/" },
+   { "name": "BBC News", "desc": "BBC 国际新闻，标准英音写作范本", "url": "https://www.bbc.com/news" },
+   { "name": "Sixth Tone", "desc": "英文中国故事报道，语言平实，题材贴近本土", "url": "https://www.sixthtone.com/" }
+  ]
+ },
+ {
+  "category": "语法",
+  "items": [
+   { "name": "Cambridge Grammar（剑桥语法）", "desc": "剑桥官方英语语法详解，例句地道，分主题查阅", "url": "https://dictionary.cambridge.org/grammar/british-grammar/" },
+   { "name": "Oxford Learner's Grammar", "desc": "牛津学习者语法，讲解简明，配大量例句", "url": "https://www.oxfordlearnersdictionaries.com/grammar/" },
+   { "name": "English Grammar Online", "desc": "免费在线语法课程与练习，覆盖时态、从句、虚拟语气", "url": "https://englishgrammar.org/" },
+   { "name": "China Daily Language Tips", "desc": "中国日报语言点专栏，讲解常见中式英语与易错点", "url": "https://language.chinadaily.com.cn/" }
+  ]
+ },
+ {
+  "category": "写作与翻译",
+  "items": [
+   { "name": "批改网", "desc": "在线英语作文自动批改，四六级写作练习常用", "url": "https://www.pigai.org/" },
+   { "name": "DeepL 翻译", "desc": "高质量英汉互译，写作时对照参考表达", "url": "https://www.deepl.com/translator" },
+   { "name": "有道翻译", "desc": "英汉词典与翻译，查词、看例句方便", "url": "https://fanyi.youdao.com/" },
+   { "name": "Cambridge Dictionary", "desc": "剑桥双解词典，写作选词看英英释义与搭配", "url": "https://dictionary.cambridge.org/" }
+  ]
+ },
+ {
+  "category": "备考经验",
+  "items": [
+   { "name": "知乎·英语四六级话题", "desc": "考生经验贴聚集地：规划、用书、提分方法", "url": "https://www.zhihu.com/topic/19567629" },
+   { "name": "哔哩哔哩·四六级搜索", "desc": "四六级课程与经验视频，免费名师课集中地", "url": "https://search.bilibili.com/all?keyword=%E5%9B%9B%E5%85%AD%E7%BA%A7" },
+   { "name": "中国教育在线·四六级频道", "desc": "报名资讯、备考指南与政策解读", "url": "https://www.eol.cn/html/en/cet/" },
+   { "name": "考试点·四六级真题课", "desc": "真题讲解视频与备考规划课程", "url": "https://www.kaoshidian.com/cet/" }
+  ]
+ }
+]
