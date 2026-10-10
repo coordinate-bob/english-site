@@ -420,6 +420,79 @@
         heatmap.appendChild(cell);
       }
     }
+
+    renderLearned();
+  }
+
+  /* ---------- 已学单词列表（统计页） ---------- */
+  var LEARNED_PAGE = 300;
+  var learnedShown = 0;
+
+  function collectLearned() {
+    var entries = [];
+    ['cet4', 'cet6'].forEach(function (lib) {
+      var progress = getProgress(lib);
+      var libWords = {};
+      WORDS[lib].forEach(function (w) { libWords[w.word] = w; });
+      Object.keys(progress).forEach(function (word) {
+        var meta = libWords[word] || { word: word, phonetic: '', pos: '', meaning: '' };
+        entries.push({
+          lib: lib,
+          word: meta.word,
+          phonetic: meta.phonetic,
+          pos: meta.pos,
+          meaning: meta.meaning,
+          familiarity: progress[word].familiarity || 0
+        });
+      });
+    });
+    // 熟悉度低的排前面（最需要巩固的词在最上面）
+    entries.sort(function (a, b) {
+      if (a.familiarity !== b.familiarity) return a.familiarity - b.familiarity;
+      return a.word < b.word ? -1 : 1;
+    });
+    return entries;
+  }
+
+  function learnedRowHtml(e) {
+    var dots = '';
+    for (var i = 0; i < 3; i++) dots += i < e.familiarity ? '●' : '○';
+    return '<div class="learned-row">' +
+      '<span class="learned-word">' + escapeHtml(e.word) + '</span>' +
+      '<span class="learned-phonetic">' + (e.phonetic ? escapeHtml('/' + e.phonetic + '/') : '') + '</span>' +
+      '<span class="learned-pos">' + escapeHtml(e.pos) + '</span>' +
+      '<span class="learned-fam" title="熟悉度 ' + e.familiarity + '/3">' + dots + '</span>' +
+      '<span class="lib-badge lib-' + e.lib + '">' + (e.lib === 'cet4' ? '四级' : '六级') + '</span>' +
+      '<span class="learned-meaning">' + escapeHtml(e.meaning) + '</span>' +
+      '</div>';
+  }
+
+  function renderLearned() {
+    var listEl = document.getElementById('learned-list');
+    var moreBtn = document.getElementById('learned-more-btn');
+    var countEl = document.getElementById('learned-count');
+    if (!listEl) return;
+    var filter = document.getElementById('learned-filter').value;
+    var all = collectLearned().filter(function (e) { return filter === 'all' || e.lib === filter; });
+    learnedShown = Math.min(LEARNED_PAGE, all.length);
+    countEl.textContent = all.length ? '共 ' + all.length + ' 词 · 熟悉度低的排前面' : '';
+    var failed = [];
+    if (wordsFailed.cet4) failed.push('四级');
+    if (wordsFailed.cet6) failed.push('六级');
+    var warn = failed.length
+      ? '<p class="muted small">⚠️ ' + failed.join('、') + '词表加载失败，对应单词的释义暂时无法显示，请刷新重试。</p>'
+      : '';
+    listEl.innerHTML = warn + (all.length
+      ? all.slice(0, learnedShown).map(learnedRowHtml).join('')
+      : '<p class="muted">还没有已学单词，先去「背单词」学几个吧。</p>');
+    moreBtn.classList.toggle('hidden', learnedShown >= all.length);
+    moreBtn.onclick = function () {
+      var next = Math.min(learnedShown + LEARNED_PAGE, all.length);
+      // insertAdjacentHTML 只解析新增片段，避免 innerHTML += 整体重解析卡顿
+      listEl.insertAdjacentHTML('beforeend', all.slice(learnedShown, next).map(learnedRowHtml).join(''));
+      learnedShown = next;
+      moreBtn.classList.toggle('hidden', learnedShown >= all.length);
+    };
   }
 
   /* ================= Tab 切换 ================= */
@@ -473,6 +546,8 @@
         renderWordsTab();
       }
     });
+
+    document.getElementById('learned-filter').addEventListener('change', renderLearned);
   }
 
   function init() {

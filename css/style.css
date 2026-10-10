@@ -301,3 +301,49 @@ main { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
   font-size: 14px;
 }
 .load-error code { background: #fee2e2; padding: 1px 5px; border-radius: 4px; }
+
+/* 已学单词列表 */
+.learned-toolbar { margin-bottom: 12px; }
+.learned-toolbar select {
+  font-size: 14px;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+}
+.learned-toolbar .muted { margin-left: 10px; }
+.learned-list {
+  max-height: 480px;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.learned-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.learned-row:last-child { border-bottom: none; }
+.learned-row:hover { background: #f8fafc; }
+.learned-word { font-weight: 600; min-width: 120px; }
+.learned-phonetic { color: var(--muted); min-width: 110px; font-size: 13px; }
+.learned-pos { color: var(--muted); min-width: 76px; font-size: 13px; }
+.learned-fam { color: #f59e0b; letter-spacing: 2px; white-space: nowrap; }
+.learned-meaning { color: #334155; flex: 1; }
+.lib-badge {
+  font-size: 11px;
+  padding: 1px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.lib-cet4 { background: #dbeafe; color: #1d4ed8; }
+.lib-cet6 { background: #ede9fe; color: #6d28d9; }
+.learned-more { text-align: center; margin-top: 12px; }
+
+@media (max-width: 560px) {
+  .learned-row { flex-wrap: wrap; gap: 6px 10px; }
+  .learned-phonetic, .learned-pos { min-width: 0; }
+}
