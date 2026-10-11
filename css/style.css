@@ -322,6 +322,7 @@ main { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
   overflow-y: auto;
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  padding: 10px;
 }
 .learned-row {
   display: flex;
@@ -346,7 +347,34 @@ main { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
 }
 .lib-cet4 { background: #dbeafe; color: #1d4ed8; }
 .lib-cet6 { background: #ede9fe; color: #6d28d9; }
-.learned-more { text-align: center; margin-top: 12px; }
+
+/* 已学单词：按天折叠分组 */
+.day-group {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.day-group:last-child { margin-bottom: 0; }
+.day-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 9px 12px;
+  border: none;
+  background: #f8fafc;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+.day-header:hover { background: #eef2f7; }
+.day-caret { color: var(--muted); width: 14px; flex: none; }
+.day-count { margin-left: auto; font-weight: 400; font-size: 13px; }
+.day-body { border-top: 1px solid var(--border); }
 
 /* 拼写巩固（阶段二） */
 .spell-phase-badge {

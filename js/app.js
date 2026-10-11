@@ -525,9 +525,9 @@
     renderLearned();
   }
 
-  /* ---------- 已学单词列表（统计页） ---------- */
-  var LEARNED_PAGE = 300;
-  var learnedShown = 0;
+  /* ---------- 已学单词列表（统计页，按天折叠分组） ---------- */
+  var learnedOpen = {}; // 各天展开状态；未记录的默认只有最新一天展开
+  var learnedGroupsCache = []; // 当前渲染的分组数据，展开时懒加载行
 
   function collectLearned() {
     var entries = [];
@@ -543,7 +543,8 @@
           phonetic: meta.phonetic,
           pos: meta.pos,
           meaning: meta.meaning,
-          familiarity: progress[word].familiarity || 0
+          familiarity: progress[word].familiarity || 0,
+          seenAt: progress[word].seenAt || ''
         });
       });
     });
@@ -568,32 +569,84 @@
       '</div>';
   }
 
+  function formatDayLabel(day) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) return day || '未知日期';
+    return parseInt(day.slice(5, 7), 10) + '月' + parseInt(day.slice(8, 10), 10) + '日';
+  }
+
+  function groupByDay(entries) {
+    var map = {}, days = [];
+    entries.forEach(function (e) {
+      var d = e.seenAt || '未知日期';
+      if (!map[d]) { map[d] = []; days.push(d); }
+      map[d].push(e);
+    });
+    // 真实日期倒序（最新在前），「未知日期」排最后
+    days.sort(function (a, b) {
+      var ra = /^\d{4}-/.test(a), rb = /^\d{4}-/.test(b);
+      if (ra && rb) return a < b ? 1 : -1;
+      return ra ? -1 : 1;
+    });
+    return days.map(function (d) { return { day: d, entries: map[d] }; });
+  }
+
+  function dayGroupHtml(g, isFirst) {
+    var open = learnedOpen[g.day] !== undefined ? learnedOpen[g.day] : isFirst;
+    return '<div class="day-group" data-day="' + escapeHtml(g.day) + '">' +
+      '<button class="day-header">' +
+      '<span class="day-caret">' + (open ? '▾' : '▸') + '</span>' +
+      '<span class="day-title">📅 ' + escapeHtml(formatDayLabel(g.day)) + '</span>' +
+      '<span class="day-count muted">' + g.entries.length + ' 词</span>' +
+      '</button>' +
+      '<div class="day-body' + (open ? '' : ' hidden') + '">' +
+      (open ? g.entries.map(learnedRowHtml).join('') : '') +
+      '</div>' +
+      '</div>';
+  }
+
   function renderLearned() {
     var listEl = document.getElementById('learned-list');
-    var moreBtn = document.getElementById('learned-more-btn');
     var countEl = document.getElementById('learned-count');
     if (!listEl) return;
     var filter = document.getElementById('learned-filter').value;
     var all = collectLearned().filter(function (e) { return filter === 'all' || e.lib === filter; });
-    learnedShown = Math.min(LEARNED_PAGE, all.length);
-    countEl.textContent = all.length ? '共 ' + all.length + ' 词 · 熟悉度低的排前面' : '';
     var failed = [];
     if (wordsFailed.cet4) failed.push('四级');
     if (wordsFailed.cet6) failed.push('六级');
     var warn = failed.length
       ? '<p class="muted small">⚠️ ' + failed.join('、') + '词表加载失败，对应单词的释义暂时无法显示，请刷新重试。</p>'
       : '';
-    listEl.innerHTML = warn + (all.length
-      ? all.slice(0, learnedShown).map(learnedRowHtml).join('')
-      : '<p class="muted">还没有已学单词，先去「背单词」学几个吧。</p>');
-    moreBtn.classList.toggle('hidden', learnedShown >= all.length);
-    moreBtn.onclick = function () {
-      var next = Math.min(learnedShown + LEARNED_PAGE, all.length);
-      // insertAdjacentHTML 只解析新增片段，避免 innerHTML += 整体重解析卡顿
-      listEl.insertAdjacentHTML('beforeend', all.slice(learnedShown, next).map(learnedRowHtml).join(''));
-      learnedShown = next;
-      moreBtn.classList.toggle('hidden', learnedShown >= all.length);
-    };
+    if (!all.length) {
+      learnedGroupsCache = [];
+      countEl.textContent = '';
+      listEl.innerHTML = warn + '<p class="muted">还没有已学单词，先去「背单词」学几个吧。</p>';
+      return;
+    }
+    learnedGroupsCache = groupByDay(all);
+    countEl.textContent = '共 ' + all.length + ' 词 · ' + learnedGroupsCache.length + ' 天 · 点击日期可折叠/展开';
+    listEl.innerHTML = warn + learnedGroupsCache.map(function (g, i) { return dayGroupHtml(g, i === 0); }).join('');
+  }
+
+  // 折叠/展开：事件委托，展开时按需渲染该天单词
+  function onLearnedListClick(e) {
+    var header = e.target.closest('.day-header');
+    if (!header) return;
+    var groupEl = header.parentElement;
+    var body = groupEl.querySelector('.day-body');
+    var day = groupEl.dataset.day;
+    var isOpen = !body.classList.contains('hidden');
+    learnedOpen[day] = !isOpen; // 记录切换后的展开状态，筛选/刷新后保持
+    if (isOpen) {
+      body.classList.add('hidden');
+      body.innerHTML = ''; // 收起时释放行节点
+    } else {
+      if (!body.innerHTML) {
+        var g = learnedGroupsCache.find(function (x) { return x.day === day; });
+        if (g) body.innerHTML = g.entries.map(learnedRowHtml).join('');
+      }
+      body.classList.remove('hidden');
+    }
+    header.querySelector('.day-caret').textContent = isOpen ? '▸' : '▾';
   }
 
   /* ================= Tab 切换 ================= */
@@ -655,6 +708,7 @@
     });
 
     document.getElementById('learned-filter').addEventListener('change', renderLearned);
+    document.getElementById('learned-list').addEventListener('click', onLearnedListClick);
   }
 
   function init() {
