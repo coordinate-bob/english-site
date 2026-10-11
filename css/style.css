@@ -100,6 +100,8 @@ main { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
 .btn-danger:hover { background: #b91c1c; }
 .btn-warn { background: #f59e0b; }
 .btn-warn:hover { background: #d97706; }
+.btn-vague { background: #8b5cf6; }
+.btn-vague:hover { background: #7c3aed; }
 .btn-ghost {
   background: #eef2ff;
   color: var(--primary);
@@ -159,6 +161,7 @@ main { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
 .word-actions {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 16px;
   margin-top: 20px;
 }
@@ -288,6 +291,8 @@ main { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
   .tab-btn { padding: 8px 12px; font-size: 14px; }
   .word-text { font-size: 28px; }
   .toolbar { gap: 8px; }
+  .word-actions { gap: 10px; margin-top: 14px; }
+  .word-actions .btn { min-width: 104px; padding: 10px 12px; }
 }
 
 .load-error {

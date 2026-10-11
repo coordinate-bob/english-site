@@ -186,14 +186,22 @@
     write('newqueue-' + session.lib, queue);
   }
 
-  function answer(known) {
+  // result: 'know' 熟悉度+1 按新等级排期；'vague' 熟悉度不变、明天复习；'unknow' 归零、明天复习
+  function answer(result) {
     var item = currentItem();
     if (!item) return;
     var progress = getProgress(session.lib);
     var e = progress[item.word];
     if (e) {
-      e.familiarity = known ? Math.min(3, e.familiarity + 1) : 0;
-      e.due = Date.now() + INTERVALS[e.familiarity] * DAY;
+      if (result === 'know') {
+        e.familiarity = Math.min(3, e.familiarity + 1);
+        e.due = Date.now() + INTERVALS[e.familiarity] * DAY;
+      } else if (result === 'vague') {
+        e.due = Date.now() + INTERVALS[0] * DAY;
+      } else {
+        e.familiarity = 0;
+        e.due = Date.now() + INTERVALS[0] * DAY;
+      }
       write('words-' + session.lib, progress);
     }
     bumpDailyCount();
@@ -532,8 +540,9 @@
       this.classList.add('hidden');
     });
     document.getElementById('speak-btn').addEventListener('click', speakWord);
-    document.getElementById('know-btn').addEventListener('click', function () { answer(true); });
-    document.getElementById('unknow-btn').addEventListener('click', function () { answer(false); });
+    document.getElementById('know-btn').addEventListener('click', function () { answer('know'); });
+    document.getElementById('vague-btn').addEventListener('click', function () { answer('vague'); });
+    document.getElementById('unknow-btn').addEventListener('click', function () { answer('unknow'); });
 
     document.getElementById('reset-btn').addEventListener('click', function () {
       var lib = currentLib;
