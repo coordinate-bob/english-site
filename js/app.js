@@ -4,8 +4,9 @@
 
   var PREFIX = 'eng-';
   var DAY = 24 * 3600 * 1000;
-  // 熟悉度 0–3 对应的复习间隔（天）：0→1天，1→3天，2→7天，3→15天
-  var INTERVALS = [1, 3, 7, 15];
+  // 艾宾浩斯记忆阶段 0–5 对应的复习间隔（天）：0→1天，1→2天，2→4天，3→7天，4→15天，5→30天
+  var INTERVALS = [1, 2, 4, 7, 15, 30];
+  var MAX_STAGE = 5; // 第 5 关（30 天）再答对即毕业（stage 6），不再进复习队列
   var NEW_PER_DAY = 20;
 
   /* ---------- storage 帮助函数（统一加前缀，读取防 JSON 损坏） ---------- */
@@ -86,7 +87,25 @@
   var currentLib = read('current-lib', 'cet4');
   var session = null; // 当日会话，持久化到 eng-session-<lib>
 
-  function getProgress(lib) { return read('words-' + lib, {}); }
+  function getProgress(lib) {
+    var p = read('words-' + lib, {});
+    // 旧版数据迁移：familiarity(0–3) → stage；旧「已掌握」(3) 直接毕业，尊重已有学习成果
+    var changed = false;
+    Object.keys(p).forEach(function (w) {
+      if (!p[w] || typeof p[w] !== 'object') {
+        p[w] = { stage: 0, due: Date.now(), seenAt: todayKey() };
+        changed = true;
+        return;
+      }
+      if (p[w].stage === undefined) {
+        p[w].stage = (p[w].familiarity || 0) >= 3 ? MAX_STAGE + 1 : (p[w].familiarity || 0);
+        delete p[w].familiarity;
+        changed = true;
+      }
+    });
+    if (changed) write('words-' + lib, p);
+    return p;
+  }
   function getNewQueue(lib) {
     var saved = read('newqueue-' + lib, null);
     if (saved && saved.length) return saved;
@@ -128,7 +147,7 @@
     // 到期复习词：due 已到且未掌握的，按到期时间先后排
     Object.keys(progress).forEach(function (w) {
       var e = progress[w];
-      if (e.due <= now && e.familiarity < 3) items.push({ type: 'review', word: w });
+      if (e.due <= now && e.stage <= MAX_STAGE) items.push({ type: 'review', word: w });
     });
     items.sort(function (a, b) { return progress[a.word].due - progress[b.word].due; });
 
@@ -169,7 +188,8 @@
 
     var hint = document.getElementById('word-due-hint');
     if (item.type === 'review') {
-      hint.textContent = '🔁 今日复习（上次熟悉度 ' + getProgress(session.lib)[item.word].familiarity + '/3）';
+      var entry = getProgress(session.lib)[item.word];
+      hint.textContent = '🔁 今日复习（记忆阶段 ' + entry.stage + '/6）';
     } else {
       hint.textContent = '🆕 今日新词';
       markAsSeen(item);
@@ -181,7 +201,7 @@
   function markAsSeen(item) {
     var progress = getProgress(session.lib);
     if (progress[item.word]) return;
-    progress[item.word] = { familiarity: 0, due: Date.now() + INTERVALS[0] * DAY, seenAt: todayKey() };
+    progress[item.word] = { stage: 0, due: Date.now() + INTERVALS[0] * DAY, seenAt: todayKey() };
     write('words-' + session.lib, progress);
 
     var queue = getNewQueue(session.lib);
@@ -190,7 +210,7 @@
     write('newqueue-' + session.lib, queue);
   }
 
-  // result: 'know' 熟悉度+1 按新等级排期；'vague' 熟悉度不变、明天复习；'unknow' 归零、明天复习
+  // result: 'know' 进入下一记忆阶段按新间隔排期，第 5 关答对即毕业；'vague' 阶段不变、明天复习；'unknow' 退回第 0 关、明天复习
   function answer(result) {
     var item = currentItem();
     if (!item) return;
@@ -198,12 +218,12 @@
     var e = progress[item.word];
     if (e) {
       if (result === 'know') {
-        e.familiarity = Math.min(3, e.familiarity + 1);
-        e.due = Date.now() + INTERVALS[e.familiarity] * DAY;
+        if (e.stage >= MAX_STAGE) { e.stage = MAX_STAGE + 1; e.due = null; } // 毕业
+        else { e.stage += 1; e.due = Date.now() + INTERVALS[e.stage] * DAY; }
       } else if (result === 'vague') {
         e.due = Date.now() + INTERVALS[0] * DAY;
       } else {
-        e.familiarity = 0;
+        e.stage = 0;
         e.due = Date.now() + INTERVALS[0] * DAY;
       }
       write('words-' + session.lib, progress);
@@ -473,6 +493,41 @@
     return (counts[key] || 0) + (checkins[key] ? 10 : 0);
   }
 
+  function renderPlan() {
+    var el = document.getElementById('review-plan');
+    if (!el) return;
+    var now = Date.now();
+    var today = todayKey();
+    var buckets = {};
+    var graduated = 0;
+    ['cet4', 'cet6'].forEach(function (lib) {
+      var progress = getProgress(lib);
+      Object.keys(progress).forEach(function (w) {
+        var e = progress[w];
+        if (e.stage > MAX_STAGE) { graduated++; return; } // 毕业词不再复习
+        var d = e.due <= now ? today : dateKey(new Date(e.due));
+        buckets[d] = (buckets[d] || 0) + 1;
+      });
+    });
+
+    var days = [];
+    for (var i = 0; i < 7; i++) days.push(dateKey(new Date(now + i * DAY)));
+    var max = 1;
+    days.forEach(function (d) { if (buckets[d] > max) max = buckets[d]; });
+    var total7 = days.reduce(function (s, d) { return s + (buckets[d] || 0); }, 0);
+
+    el.innerHTML = days.map(function (d, i) {
+      var n = buckets[d] || 0;
+      var label = i === 0 ? '今天' : (i === 1 ? '明天' : formatDayLabel(d));
+      return '<div class="plan-row">' +
+        '<span class="plan-label">' + escapeHtml(label) + '</span>' +
+        '<div class="plan-bar"><div class="plan-fill' + (i === 0 && n > 0 ? ' today' : '') + '" style="width:' + Math.round(n / max * 100) + '%"></div></div>' +
+        '<span class="plan-num">' + n + ' 词</span>' +
+        '</div>';
+    }).join('') +
+    '<p class="muted small">未来 7 天共复习 ' + total7 + ' 词次 · 已毕业 ' + graduated + ' 词 🎓</p>';
+  }
+
   function renderStats() {
     var counts = read('daily-counts', {});
     var checkins = getCheckins();
@@ -484,7 +539,7 @@
       var progress = getProgress(lib);
       Object.keys(progress).forEach(function (w) {
         seen++;
-        if (progress[w].familiarity >= 3) mastered++;
+        if (progress[w].stage > MAX_STAGE) mastered++;
       });
     });
     var learnDays = {};
@@ -494,7 +549,7 @@
     var summary = [
       { num: total, label: '总词条数' },
       { num: seen, label: '已学词数' },
-      { num: mastered, label: '已掌握（熟悉度 3）' },
+      { num: mastered, label: '已掌握（毕业 🎓）' },
       { num: calcStreak(), label: '连续打卡天数' },
       { num: Object.keys(learnDays).length, label: '累计学习天数' }
     ];
@@ -523,6 +578,7 @@
     }
 
     renderLearned();
+    renderPlan();
   }
 
   /* ---------- 已学单词列表（统计页，按天折叠分组） ---------- */
@@ -543,7 +599,7 @@
           phonetic: meta.phonetic,
           pos: meta.pos,
           meaning: meta.meaning,
-          familiarity: progress[word].familiarity || 0,
+          familiarity: progress[word].stage || 0,
           seenAt: progress[word].seenAt || ''
         });
       });
@@ -558,12 +614,13 @@
 
   function learnedRowHtml(e) {
     var dots = '';
-    for (var i = 0; i < 3; i++) dots += i < e.familiarity ? '●' : '○';
+    for (var i = 0; i <= MAX_STAGE; i++) dots += i < e.familiarity ? '●' : '○';
+    var stageText = e.familiarity > MAX_STAGE ? '已毕业 🎓' : '记忆阶段 ' + e.familiarity + '/' + (MAX_STAGE + 1);
     return '<div class="learned-row">' +
       '<span class="learned-word">' + escapeHtml(e.word) + '</span>' +
       '<span class="learned-phonetic">' + (e.phonetic ? escapeHtml('/' + e.phonetic + '/') : '') + '</span>' +
       '<span class="learned-pos">' + escapeHtml(e.pos) + '</span>' +
-      '<span class="learned-fam" title="熟悉度 ' + e.familiarity + '/3">' + dots + '</span>' +
+      '<span class="learned-fam" title="' + stageText + '">' + dots + '</span>' +
       '<span class="lib-badge lib-' + e.lib + '">' + (e.lib === 'cet4' ? '四级' : '六级') + '</span>' +
       '<span class="learned-meaning">' + escapeHtml(e.meaning) + '</span>' +
       '</div>';

@@ -400,6 +400,26 @@ main { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
 #spell-input:focus { border-color: var(--primary); outline: none; }
 .spell-feedback { min-height: 24px; margin-top: 12px; color: #b91c1c; font-size: 14px; }
 
+/* 艾宾浩斯复习计划 */
+.plan-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0;
+  font-size: 14px;
+}
+.plan-label { width: 52px; flex: none; color: #334155; }
+.plan-bar {
+  flex: 1;
+  height: 14px;
+  background: #f1f5f9;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.plan-fill { height: 100%; background: #93c5fd; border-radius: 999px; min-width: 0; }
+.plan-fill.today { background: var(--primary); }
+.plan-num { width: 52px; flex: none; text-align: right; color: var(--muted); font-size: 13px; }
+
 @media (max-width: 560px) {
   .learned-row { flex-wrap: wrap; gap: 6px 10px; }
   .learned-phonetic, .learned-pos { min-width: 0; }
