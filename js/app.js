@@ -113,6 +113,10 @@
     var saved = read('session-' + lib, null);
     if (saved && saved.date === todayKey() && Array.isArray(saved.items)) {
       session = saved;
+      // 兼容旧版会话结构：补阶段字段（learn 学词 / spell 拼写巩固）
+      session.phase = session.phase || 'learn';
+      session.spellQueue = session.spellQueue || [];
+      session.spellPos = session.spellPos || 0;
       return;
     }
 
@@ -132,7 +136,7 @@
     var news = queue.slice(0, NEW_PER_DAY).map(function (i) {
       return { type: 'new', index: i, word: WORDS[lib][i].word };
     });
-    session = { date: todayKey(), lib: lib, items: items.concat(news), idx: 0, done: 0, total: items.length + news.length };
+    session = { date: todayKey(), lib: lib, items: items.concat(news), idx: 0, done: 0, total: items.length + news.length, phase: 'learn', spellQueue: [], spellPos: 0 };
     saveSession();
   }
 
@@ -146,13 +150,13 @@
     var doneCard = document.getElementById('done-card');
     var card = document.getElementById('word-card');
     if (!item) {
-      card.classList.add('hidden');
-      doneCard.classList.remove('hidden');
-      updateTaskUI();
+      if (session && session.phase === 'learn') { enterSpellPhase(); return; }
+      showDone();
       return;
     }
     card.classList.remove('hidden');
     doneCard.classList.add('hidden');
+    document.getElementById('spell-card').classList.add('hidden');
 
     var word = WORDS[session.lib].find(function (w) { return w.word === item.word; });
     document.getElementById('word-text').textContent = word.word;
@@ -204,12 +208,95 @@
       }
       write('words-' + session.lib, progress);
     }
+    // 认识/模糊的词进入拼写巩固队列；不认识的词不考拼写，按原逻辑明天复习
+    if (result !== 'unknow') session.spellQueue.push(item.word);
     bumpDailyCount();
     session.idx++;
     session.done++;
     saveSession();
     updateTaskUI();
     showCurrentWord();
+  }
+
+  /* ---------- 阶段二：拼写巩固 ---------- */
+  function enterSpellPhase() {
+    session.phase = 'spell';
+    session.spellPos = 0;
+    saveSession();
+    if (!session.spellQueue.length) { showDone(); return; }
+    renderSpell();
+  }
+
+  function showDone() {
+    document.getElementById('word-card').classList.add('hidden');
+    document.getElementById('spell-card').classList.add('hidden');
+    document.getElementById('done-card').classList.remove('hidden');
+    // 只有真的经历了拼写巩固才说「全部拼写正确」（全部不认识/空闲日等场景不适用）
+    document.getElementById('done-title').textContent =
+      (session && session.spellQueue && session.spellQueue.length > 0)
+        ? '今日任务已完成！今天的单词全部拼写正确。'
+        : '今日任务已完成！';
+    updateTaskUI();
+  }
+
+  function renderSpell() {
+    if (!session || session.phase !== 'spell') return; // 防 1.8 秒停顿期间用户切词库/重置后的过期渲染
+    if (session.spellPos >= session.spellQueue.length) { showDone(); return; }
+    var wordCard = document.getElementById('word-card');
+    var card = document.getElementById('spell-card');
+    wordCard.classList.add('hidden');
+    document.getElementById('done-card').classList.add('hidden');
+    card.classList.remove('hidden');
+
+    var word = session.spellQueue[session.spellPos];
+    var meta = WORDS[session.lib].find(function (w) { return w.word === word; });
+    document.getElementById('spell-phonetic').textContent = meta && meta.phonetic ? '/' + meta.phonetic + '/' : '';
+    document.getElementById('spell-pos').textContent = meta && meta.pos ? meta.pos : '';
+    document.getElementById('spell-meaning').textContent = meta ? meta.meaning : '（词表中未找到该词）';
+    var input = document.getElementById('spell-input');
+    input.value = '';
+    input.disabled = false;
+    document.getElementById('spell-submit-btn').disabled = false;
+    document.getElementById('spell-feedback').textContent = '';
+    var miss = (session.spellMisses && session.spellMisses[word]) || 0;
+    document.getElementById('spell-due-hint').textContent = miss ? '这个词已拼错 ' + miss + ' 次，加油！' : '';
+    updateTaskUI();
+    input.focus();
+  }
+
+  function submitSpell() {
+    if (!session || session.phase !== 'spell') return;
+    if (session.spellPos >= session.spellQueue.length) return;
+    var input = document.getElementById('spell-input');
+    var value = input.value.trim().toLowerCase();
+    if (!value) return;
+    var word = session.spellQueue[session.spellPos];
+
+    if (value === word.toLowerCase()) {
+      bumpDailyCount();
+      session.spellPos++;
+      saveSession();
+      renderSpell();
+    } else {
+      // 拼错：显示正确拼写，并把该词排到队尾，之后重考
+      session.spellMisses = session.spellMisses || {};
+      session.spellMisses[word] = (session.spellMisses[word] || 0) + 1;
+      session.spellQueue.push(word);
+      session.spellPos++;
+      bumpDailyCount();
+      saveSession();
+      document.getElementById('spell-feedback').innerHTML =
+        '❌ 正确拼写：<strong>' + escapeHtml(word) + '</strong>，这个词稍后会再考你';
+      input.value = '';
+      input.disabled = true;
+      document.getElementById('spell-submit-btn').disabled = true;
+      updateTaskUI();
+      // 1.8 秒后自动进下一题；回调前校验会话仍是同一个拼写阶段，防切换词库/重置后误渲染
+      var libAtMiss = session.lib;
+      setTimeout(function () {
+        if (session && session.phase === 'spell' && session.lib === libAtMiss) renderSpell();
+      }, 1800);
+    }
   }
 
   function bumpDailyCount() {
@@ -224,12 +311,18 @@
     var count = document.getElementById('task-count');
     var label = document.getElementById('task-label');
     if (!session) return;
-    if (session.total === 0) {
+    var libLabel = session.lib === 'cet4' ? '四级' : '六级';
+    if (session.phase === 'spell') {
+      var n = session.spellQueue.length;
+      label.textContent = '拼写巩固（' + libLabel + '）';
+      count.textContent = n ? '已拼 ' + Math.min(session.spellPos, n) + ' / ' + n + '（含重考）' : '';
+      fill.style.width = n ? Math.round(Math.min(session.spellPos, n) / n * 100) + '%' : '100%';
+    } else if (session.total === 0) {
       label.textContent = '今日任务';
       count.textContent = '暂无到期复习，新词已全部学完 🎓';
       fill.style.width = '100%';
     } else {
-      label.textContent = session.lib === 'cet4' ? '今日任务（四级）' : '今日任务（六级）';
+      label.textContent = '今日任务（' + libLabel + '）';
       count.textContent = '已完成 ' + session.done + ' / ' + session.total;
       fill.style.width = Math.round(session.done / session.total * 100) + '%';
     }
@@ -258,7 +351,7 @@
       }
       if (!session || session.lib !== lib) buildSession(lib);
       updateTaskUI();
-      showCurrentWord();
+      if (session.phase === 'spell') renderSpell(); else showCurrentWord();
     });
   }
 
@@ -543,6 +636,11 @@
     document.getElementById('know-btn').addEventListener('click', function () { answer('know'); });
     document.getElementById('vague-btn').addEventListener('click', function () { answer('vague'); });
     document.getElementById('unknow-btn').addEventListener('click', function () { answer('unknow'); });
+
+    document.getElementById('spell-submit-btn').addEventListener('click', submitSpell);
+    document.getElementById('spell-input').addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') submitSpell();
+    });
 
     document.getElementById('reset-btn').addEventListener('click', function () {
       var lib = currentLib;

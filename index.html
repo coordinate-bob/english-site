@@ -57,8 +57,22 @@
       </div>
 
       <div class="card center hidden" id="done-card">
-        <p>🎉 今日任务已完成！</p>
+        <p>🎉 <span id="done-title">今日任务已完成！</span></p>
         <p class="muted">明天再来，到期单词会自动进入复习队列。</p>
+      </div>
+
+      <div class="card word-card hidden" id="spell-card">
+        <div class="spell-phase-badge">✏️ 阶段二：拼写巩固</div>
+        <p class="muted small">根据释义写出对应的英文单词，全部拼对才算完成今日任务。</p>
+        <div id="spell-phonetic" class="phonetic"></div>
+        <div id="spell-pos" class="pos"></div>
+        <div id="spell-meaning" class="meaning"></div>
+        <div class="spell-input-row">
+          <input id="spell-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="输入单词后按回车">
+          <button id="spell-submit-btn" class="btn btn-primary">提交</button>
+        </div>
+        <div id="spell-feedback" class="spell-feedback"></div>
+        <div id="spell-due-hint" class="muted small"></div>
       </div>
     </section>
 

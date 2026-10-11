@@ -348,6 +348,30 @@ main { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
 .lib-cet6 { background: #ede9fe; color: #6d28d9; }
 .learned-more { text-align: center; margin-top: 12px; }
 
+/* 拼写巩固（阶段二） */
+.spell-phase-badge {
+  display: inline-block;
+  background: #ede9fe;
+  color: #6d28d9;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+#spell-meaning { font-size: 20px; margin-top: 10px; color: #1e293b; }
+.spell-input-row { display: flex; gap: 10px; justify-content: center; margin-top: 18px; }
+#spell-input {
+  font-size: 18px;
+  padding: 10px 14px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  width: 260px;
+  max-width: 100%;
+  text-align: center;
+}
+#spell-input:focus { border-color: var(--primary); outline: none; }
+.spell-feedback { min-height: 24px; margin-top: 12px; color: #b91c1c; font-size: 14px; }
+
 @media (max-width: 560px) {
   .learned-row { flex-wrap: wrap; gap: 6px 10px; }
   .learned-phonetic, .learned-pos { min-width: 0; }
