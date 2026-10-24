@@ -12,6 +12,7 @@
     <nav class="tabs" id="tab-nav">
       <button class="tab-btn active" data-tab="words">背单词</button>
       <button class="tab-btn" data-tab="listening">每日听力</button>
+      <button class="tab-btn" data-tab="writing">写作</button>
       <button class="tab-btn" data-tab="resources">资源导航</button>
       <button class="tab-btn" data-tab="stats">我的统计</button>
     </nav>
@@ -85,12 +86,32 @@
       </div>
     </section>
 
-    <!-- Tab 3 资源导航 -->
+    <!-- Tab 3 写作 -->
+    <section id="tab-writing" class="tab-panel">
+      <div class="card">
+        <h2>✍️ 值得背的功能句型</h2>
+        <p class="muted small">按写作环节分组：开头 → 观点 → 论点 → 举例 → 因果 → 转折 → 强调 → 建议 → 结尾 → 展望。优先背句型，考场上自由组合；点句尾按钮标记「已背」。</p>
+        <div class="learned-toolbar">
+          <select id="sentence-filter">
+            <option value="all">全部分类</option>
+          </select>
+          <span id="sentence-progress" class="muted small"></span>
+        </div>
+        <div id="sentence-list" class="sentence-list"></div>
+      </div>
+      <div class="card">
+        <h2>📄 优秀范文</h2>
+        <p class="muted small">点开标题查看全文：每篇附中文大意、段落结构和可迁移的亮点句。范文为原创示例，学结构、背句型，不要整篇死背。</p>
+        <div id="essay-list"></div>
+      </div>
+    </section>
+
+    <!-- Tab 4 资源导航 -->
     <section id="tab-resources" class="tab-panel">
       <div id="resource-grid" class="resource-grid"></div>
     </section>
 
-    <!-- Tab 4 我的统计 -->
+    <!-- Tab 5 我的统计 -->
     <section id="tab-stats" class="tab-panel">
       <div class="stats-summary" id="stats-summary"></div>
       <div class="card">

@@ -400,6 +400,60 @@ main { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
 #spell-input:focus { border-color: var(--primary); outline: none; }
 .spell-feedback { min-height: 24px; margin-top: 12px; color: #b91c1c; font-size: 14px; }
 
+/* 写作：句型库与范文 */
+.sentence-list { display: flex; flex-direction: column; gap: 8px; }
+.sen-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.sen-row:last-child { border-bottom: none; }
+.sen-row.memorized { background: #f0fdf4; }
+.sen-row.memorized .sen-en { color: #15803d; }
+.sen-main { flex: 1; min-width: 0; }
+.sen-en { font-weight: 600; }
+.sen-zh { color: #334155; }
+.sen-mem-btn { flex: none; background: #eef2ff; color: var(--primary); }
+.sen-mem-btn:hover { background: #e0e7ff; }
+.sen-mem-btn.done { background: #dcfce7; color: #15803d; }
+.sen-mem-btn.done:hover { background: #bbf7d0; }
+
+.essay-body { padding: 12px 14px; }
+.essay-prompt {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.essay-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #1e293b;
+}
+.essay-text p { margin-bottom: 10px; }
+.essay-gist {
+  font-size: 13px;
+  color: #334155;
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 6px 0 14px;
+}
+.essay-body h3 { font-size: 14px; margin: 12px 0 6px; }
+.essay-list { padding-left: 20px; font-size: 13px; color: #334155; }
+.essay-list li { margin-bottom: 6px; }
+.essay-highlights .sen-en { font-size: 14px; }
+.day-title { min-width: 0; }
+.day-header .lib-badge { flex: none; }
+
+@media (max-width: 560px) {
+  .sen-row { flex-direction: column; gap: 6px; }
+  .sen-mem-btn { align-self: flex-end; }
+}
+
 /* 艾宾浩斯复习计划 */
 .plan-row {
   display: flex;

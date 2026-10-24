@@ -480,7 +480,146 @@
     });
   }
 
-  /* ================= 模块 D：我的统计 ================= */
+  /* ================= 模块 D：写作 ================= */
+  var WRITING = { sentences: [], essays: [] };
+  var writingFailed = false;
+  var memorized = read('writing-memorized', {}); // 句型 id → true，已背标记
+  var sentenceOpen = {}; // 句型分类展开状态；未记录默认第一个分类展开
+  var essayOpen = {};    // 范文展开状态；未记录默认第一篇展开
+
+  function sentenceRowHtml(s) {
+    var done = !!memorized[s.id];
+    return '<div class="sen-row' + (done ? ' memorized' : '') + '">' +
+      '<div class="sen-main">' +
+      '<div class="sen-en">' + escapeHtml(s.en) + '</div>' +
+      '<div class="sen-zh">' + escapeHtml(s.zh) + '</div>' +
+      '<div class="sen-note muted small">' + escapeHtml(s.note) + '</div>' +
+      '</div>' +
+      '<button type="button" class="btn btn-small sen-mem-btn' + (done ? ' done' : '') + '" data-id="' + escapeHtml(s.id) + '">' +
+      (done ? '✓ 已背' : '标为已背') + '</button>' +
+      '</div>';
+  }
+
+  function renderSentences() {
+    var listEl = document.getElementById('sentence-list');
+    var progEl = document.getElementById('sentence-progress');
+    var filterSel = document.getElementById('sentence-filter');
+    if (!listEl) return;
+    if (writingFailed) {
+      listEl.innerHTML = '<p class="muted">写作素材（data/writing.json）加载失败，请刷新重试。</p>';
+      if (progEl) progEl.textContent = '';
+      return;
+    }
+    if (!WRITING.sentences.length) return; // 加载中，暂不渲染
+    if (!filterSel.dataset.built) {
+      var seen = {};
+      WRITING.sentences.forEach(function (s) {
+        if (seen[s.category]) return;
+        seen[s.category] = true;
+        var opt = document.createElement('option');
+        opt.value = s.category;
+        opt.textContent = s.category;
+        filterSel.appendChild(opt);
+      });
+      filterSel.dataset.built = '1';
+    }
+    var filter = filterSel.value;
+    var total = WRITING.sentences.length;
+    var doneCount = WRITING.sentences.filter(function (s) { return memorized[s.id]; }).length;
+    progEl.textContent = '已背 ' + doneCount + '/' + total;
+    var byCat = {}, catOrder = [];
+    WRITING.sentences.forEach(function (s) {
+      if (!byCat[s.category]) { byCat[s.category] = []; catOrder.push(s.category); }
+      byCat[s.category].push(s);
+    });
+    listEl.innerHTML = '';
+    catOrder.forEach(function (cat, i) {
+      if (filter !== 'all' && filter !== cat) return;
+      var items = byCat[cat];
+      var open = sentenceOpen[cat] !== undefined ? sentenceOpen[cat] : i === 0;
+      var doneInCat = items.filter(function (s) { return memorized[s.id]; }).length;
+      var group = document.createElement('div');
+      group.className = 'day-group';
+      group.innerHTML = '<button type="button" class="day-header" data-cat="' + escapeHtml(cat) + '">' +
+        '<span class="day-caret">' + (open ? '▾' : '▸') + '</span>' +
+        '<span class="day-title">' + escapeHtml(cat) + '</span>' +
+        '<span class="day-count muted">' + doneInCat + '/' + items.length + ' 已背</span>' +
+        '</button>' +
+        '<div class="day-body' + (open ? '' : ' hidden') + '">' + items.map(sentenceRowHtml).join('') + '</div>';
+      listEl.appendChild(group);
+    });
+  }
+
+  function renderEssays() {
+    var listEl = document.getElementById('essay-list');
+    if (!listEl || writingFailed || !WRITING.essays.length) return;
+    listEl.innerHTML = '';
+    WRITING.essays.forEach(function (e, i) {
+      var open = essayOpen[e.id] !== undefined ? essayOpen[e.id] : i === 0;
+      var words = e.body.split(/\s+/).length;
+      var paras = e.body.split(/\n\n/).map(function (p) { return '<p>' + escapeHtml(p) + '</p>'; }).join('');
+      var structure = e.structure.map(function (s) { return '<li>' + escapeHtml(s) + '</li>'; }).join('');
+      var highlights = e.highlights.map(function (h) {
+        return '<li><span class="sen-en">' + escapeHtml(h.en) + '</span>' +
+               '<div class="sen-note muted small">' + escapeHtml(h.why) + '</div></li>';
+      }).join('');
+      var group = document.createElement('div');
+      group.className = 'day-group';
+      group.innerHTML = '<button type="button" class="day-header" data-essay="' + escapeHtml(e.id) + '">' +
+        '<span class="day-caret">' + (open ? '▾' : '▸') + '</span>' +
+        '<span class="lib-badge ' + (e.level === '四级' ? 'lib-cet4' : 'lib-cet6') + '">' + escapeHtml(e.level) + '</span>' +
+        '<span class="day-title">' + escapeHtml(e.type + ' · ' + e.title) + '</span>' +
+        '<span class="day-count muted">' + words + ' 词</span>' +
+        '</button>' +
+        '<div class="day-body essay-body' + (open ? '' : ' hidden') + '">' +
+        '<p class="essay-prompt">' + escapeHtml(e.prompt) + '</p>' +
+        '<div class="essay-text">' + paras + '</div>' +
+        '<p class="essay-gist"><strong>大意：</strong>' + escapeHtml(e.gist) + '</p>' +
+        '<h3>段落结构</h3><ul class="essay-list">' + structure + '</ul>' +
+        '<h3>亮点句（可迁移）</h3><ul class="essay-list essay-highlights">' + highlights + '</ul>' +
+        '</div>';
+      listEl.appendChild(group);
+    });
+  }
+
+  function renderWriting() {
+    renderSentences();
+    renderEssays();
+  }
+
+  // 事件委托：标记已背 / 折叠展开句型分类 / 折叠展开范文
+  function onWritingClick(e) {
+    var memBtn = e.target.closest('.sen-mem-btn');
+    if (memBtn) {
+      var id = memBtn.dataset.id;
+      if (memorized[id]) delete memorized[id];
+      else memorized[id] = true;
+      write('writing-memorized', memorized);
+      renderSentences();
+      return;
+    }
+    var senHeader = e.target.closest('.day-header[data-cat]');
+    if (senHeader) {
+      var cat = senHeader.dataset.cat;
+      var body = senHeader.parentElement.querySelector('.day-body');
+      var willOpen = body.classList.contains('hidden');
+      sentenceOpen[cat] = willOpen;
+      body.classList.toggle('hidden', !willOpen);
+      senHeader.querySelector('.day-caret').textContent = willOpen ? '▾' : '▸';
+      return;
+    }
+    var essayHeader = e.target.closest('.day-header[data-essay]');
+    if (essayHeader) {
+      var eid = essayHeader.dataset.essay;
+      var ebody = essayHeader.parentElement.querySelector('.day-body');
+      var eWillOpen = ebody.classList.contains('hidden');
+      essayOpen[eid] = eWillOpen;
+      ebody.classList.toggle('hidden', !eWillOpen);
+      essayHeader.querySelector('.day-caret').textContent = eWillOpen ? '▾' : '▸';
+    }
+  }
+
+  /* ================= 模块 E：我的统计 ================= */
   function dayLevel(n) {
     if (n <= 0) return 0;
     if (n < 5) return 1;
@@ -716,6 +855,7 @@
     });
     if (name === 'words') renderWordsTab();
     else if (name === 'listening') renderListening();
+    else if (name === 'writing') renderWriting();
     else if (name === 'stats') {
       // 统计需要两个词表的总词条数，按需加载后刷新一次汇总
       Promise.all([ensureWords('cet4'), ensureWords('cet6')]).then(function () {
@@ -766,6 +906,9 @@
 
     document.getElementById('learned-filter').addEventListener('change', renderLearned);
     document.getElementById('learned-list').addEventListener('click', onLearnedListClick);
+
+    document.getElementById('tab-writing').addEventListener('click', onWritingClick);
+    document.getElementById('sentence-filter').addEventListener('change', renderSentences);
   }
 
   function init() {
@@ -784,6 +927,13 @@
     }).catch(function () {
       resourcesFailed = true;
       renderResources();
+    });
+    loadJson('data/writing.json').then(function (d) {
+      WRITING = d;
+      renderWriting();
+    }).catch(function () {
+      writingFailed = true;
+      renderWriting();
     });
     renderWordsTab();
   }

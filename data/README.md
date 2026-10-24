@@ -70,3 +70,12 @@ ECDICT 每行一个词，含 `word / phonetic / translation / pos / tag` 等列�
 - **写作与翻译**：批改网、DeepL、有道翻译、Cambridge Dictionary
 - **备考经验**：知乎四六级话题、哔哩哔哩四六级搜索、中国教育在线四六级频道、考试点真题课
 
+## writing.json（写作素材）
+
+供「写作」栏目使用，全部为**人工原创**内容（非摘自出版物或网络范文），共两部分：
+
+- **sentences（功能句型）**：按写作环节分 10 类（开头引入 / 引出观点 / 列举论点 / 举例论证 / 因果推理 / 让步转折 / 强调重要 / 建议措施 / 结尾总结 / 展望未来），共 **32** 条。字段 `{ "id", "category", "en", "zh", "note" }`；`note` 为用法提示（适用题型、语法注意点），`en` 中的 `...` 为考场替换位
+- **essays（优秀范文）**：共 **4** 篇原创范文（四级观点类、四级现象解释类、六级观点类、六级名言评论类各 1 篇），正文 146–180 词。字段 `{ "id", "level", "type", "title", "prompt", "gist", "body", "structure", "highlights" }`；`body` 段落间用空行分隔；`structure` 为逐段功能说明；`highlights` 为可迁移的亮点句及理由
+
+站点对句型的「已背」标记存于浏览器 localStorage（`eng-writing-memorized`），与本文件无关。
+

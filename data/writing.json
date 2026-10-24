@@ -1,0 +1,350 @@
+{
+ "sentences": [
+  {
+   "id": "sen-01",
+   "category": "开头引入",
+   "en": "In recent years, ... has become a hot topic among college students.",
+   "zh": "近年来，……已成为大学生中的热门话题。",
+   "note": "现象类、观点类通用开头，省略号处替换主题"
+  },
+  {
+   "id": "sen-02",
+   "category": "开头引入",
+   "en": "Nowadays, more and more people are beginning to realize the importance of ...",
+   "zh": "如今，越来越多的人开始意识到……的重要性。",
+   "note": "强调某事物受重视，适合现象类作文"
+  },
+  {
+   "id": "sen-03",
+   "category": "开头引入",
+   "en": "When it comes to ..., people's opinions vary from person to person.",
+   "zh": "谈到……，不同的人有不同的看法。",
+   "note": "引出争议话题，下一句即可亮明自己观点"
+  },
+  {
+   "id": "sen-04",
+   "category": "开头引入",
+   "en": "It is often said that ..., but what does it really mean?",
+   "zh": "人们常说……，但它究竟意味着什么？",
+   "note": "名言评论类开头，先引名言再设问"
+  },
+  {
+   "id": "sen-05",
+   "category": "引出观点",
+   "en": "As far as I am concerned, ...",
+   "zh": "就我而言，……",
+   "note": "稳妥的第一人称表态，适合任何观点类作文"
+  },
+  {
+   "id": "sen-06",
+   "category": "引出观点",
+   "en": "From my perspective, the advantages far outweigh the disadvantages.",
+   "zh": "在我看来，利远大于弊。",
+   "note": "适用于利弊类话题，直接给结论"
+  },
+  {
+   "id": "sen-07",
+   "category": "引出观点",
+   "en": "I am firmly convinced that ...",
+   "zh": "我坚信……",
+   "note": "语气较强，适合立场鲜明的题目"
+  },
+  {
+   "id": "sen-08",
+   "category": "引出观点",
+   "en": "Some people argue that ..., but I believe that ...",
+   "zh": "有人认为……，但我认为……",
+   "note": "先摆反方再反驳，结构更完整"
+  },
+  {
+   "id": "sen-09",
+   "category": "列举论点",
+   "en": "First and foremost, ...",
+   "zh": "首先且最重要的是，……",
+   "note": "论点一的开头，比 First 更正式"
+  },
+  {
+   "id": "sen-10",
+   "category": "列举论点",
+   "en": "What is more, ...",
+   "zh": "此外，……",
+   "note": "论点二的开头，比 Secondly 更自然"
+  },
+  {
+   "id": "sen-11",
+   "category": "列举论点",
+   "en": "Last but not least, ...",
+   "zh": "最后但同样重要的是，……",
+   "note": "论点三的开头，三个论点时收尾用"
+  },
+  {
+   "id": "sen-12",
+   "category": "列举论点",
+   "en": "On the one hand, ... On the other hand, ...",
+   "zh": "一方面……另一方面……",
+   "note": "从两个角度分析同一主题"
+  },
+  {
+   "id": "sen-13",
+   "category": "举例论证",
+   "en": "A case in point is that ...",
+   "zh": "一个恰当的例子是……",
+   "note": "引出例证的百搭句，六级加分"
+  },
+  {
+   "id": "sen-14",
+   "category": "举例论证",
+   "en": "Take ... as an example.",
+   "zh": "以……为例。",
+   "note": "简洁直接，四级最常用"
+  },
+  {
+   "id": "sen-15",
+   "category": "举例论证",
+   "en": "This can be best illustrated by the example of ...",
+   "zh": "这一点在……的例子中体现得最明显。",
+   "note": "适合名人、热点事例"
+  },
+  {
+   "id": "sen-16",
+   "category": "因果推理",
+   "en": "This is largely because ...",
+   "zh": "这在很大程度上是因为……",
+   "note": "解释原因，现象类作文必备"
+  },
+  {
+   "id": "sen-17",
+   "category": "因果推理",
+   "en": "As a result, ...",
+   "zh": "因此，……",
+   "note": "引出结果，注意前面要有逗号衔接"
+  },
+  {
+   "id": "sen-18",
+   "category": "因果推理",
+   "en": "Consequently, ...",
+   "zh": "因此，……",
+   "note": "比 As a result 更正式，六级适用"
+  },
+  {
+   "id": "sen-19",
+   "category": "让步转折",
+   "en": "Admittedly, ..., but it does not mean that ...",
+   "zh": "诚然，……，但这并不意味着……",
+   "note": "先让步再立论，体现思辨，加分项"
+  },
+  {
+   "id": "sen-20",
+   "category": "让步转折",
+   "en": "While it is true that ..., we should not ignore the fact that ...",
+   "zh": "虽然……是事实，但我们不应忽视……",
+   "note": "承认对方部分合理，再转到己方"
+  },
+  {
+   "id": "sen-21",
+   "category": "让步转折",
+   "en": "However, every coin has two sides.",
+   "zh": "然而，凡事都有两面性。",
+   "note": "从讲好处转到讲问题，注意口语化，一篇最多用一次"
+  },
+  {
+   "id": "sen-22",
+   "category": "强调重要",
+   "en": "There is no denying that ...",
+   "zh": "无可否认，……",
+   "note": "强调某事实毋庸置疑"
+  },
+  {
+   "id": "sen-23",
+   "category": "强调重要",
+   "en": "Nothing is more important than ...",
+   "zh": "没有什么比……更重要。",
+   "note": "强调优先级，适合结尾升华"
+  },
+  {
+   "id": "sen-24",
+   "category": "强调重要",
+   "en": "It goes without saying that ...",
+   "zh": "不言而喻，……",
+   "note": "引出自明之理，省篇幅"
+  },
+  {
+   "id": "sen-25",
+   "category": "建议措施",
+   "en": "It is high time that we took effective measures to ...",
+   "zh": "是时候采取有效措施来……了。",
+   "note": "虚拟语气，从句动词用过去式 took"
+  },
+  {
+   "id": "sen-26",
+   "category": "建议措施",
+   "en": "Only in this way can we ...",
+   "zh": "只有这样，我们才能……",
+   "note": "倒装句，结尾号召用，注意语序"
+  },
+  {
+   "id": "sen-27",
+   "category": "建议措施",
+   "en": "We should spare no effort to ...",
+   "zh": "我们应不遗余力地……",
+   "note": "表达决心，比 try our best 更高级"
+  },
+  {
+   "id": "sen-28",
+   "category": "结尾总结",
+   "en": "In conclusion, ...",
+   "zh": "总之，……",
+   "note": "最稳妥的结尾信号词"
+  },
+  {
+   "id": "sen-29",
+   "category": "结尾总结",
+   "en": "All in all, ...",
+   "zh": "总而言之，……",
+   "note": "与 In conclusion 互换，避免重复"
+  },
+  {
+   "id": "sen-30",
+   "category": "结尾总结",
+   "en": "To sum up, ...",
+   "zh": "综上所述，……",
+   "note": "稍正式，适合六级"
+  },
+  {
+   "id": "sen-31",
+   "category": "展望未来",
+   "en": "If we try our best, the future of ... will be both bright and promising.",
+   "zh": "如果我们竭尽全力，……的未来将一片光明。",
+   "note": "结尾正向展望，注意不要滥用"
+  },
+  {
+   "id": "sen-32",
+   "category": "展望未来",
+   "en": "With these efforts, I believe ... will become better and better.",
+   "zh": "有了这些努力，我相信……会越来越好。",
+   "note": "提出措施后的自然收尾"
+  }
+ ],
+ "essays": [
+  {
+   "id": "essay-ai-tools",
+   "level": "四级",
+   "type": "观点类",
+   "title": "学生使用 AI 工具学习：利大于弊吗？",
+   "prompt": "Directions: For this part, you are allowed 30 minutes to write a short essay on the use of AI tools in study. You should state your opinion and give at least two reasons. You will write at least 120 words but no more than 180 words.",
+   "gist": "观点：只要善用，AI 利大于弊——两个理由（耐心的私人辅导、提高学习效率）＋一个让步（避免依赖）。",
+   "body": "In recent years, AI tools have found their way into students' daily study, and whether to use them has become a hot topic on campus. In my opinion, students can benefit a lot from AI, as long as they use it wisely.\n\nFirst and foremost, AI serves as a patient personal tutor. Whenever we meet a difficult problem, it explains the solution step by step, something a busy teacher cannot always do. What is more, AI helps us learn more efficiently. It can summarize long articles, check our grammar and even practice spoken English with us, saving us a great deal of time.\n\nAdmittedly, relying too much on AI may weaken our ability to think independently. Therefore, we should treat AI as an assistant rather than a substitute for our own brains.\n\nIn conclusion, used properly, AI tools can make our study easier and more effective.",
+   "structure": [
+    "开头（第 1 段）：背景 + 亮明观点，用 as long as 限定条件显得思辨",
+    "论点一（第 2 段前）：AI 是耐心的私人辅导老师",
+    "论点二（第 2 段后）：AI 提高学习效率，三个具体场景支撑",
+    "让步（第 3 段）：承认风险，用 Therefore 落到「助手而非替代」",
+    "结尾（第 4 段）：一句话总结，呼应开头"
+   ],
+   "highlights": [
+    {
+     "en": "In my opinion, students can benefit a lot from AI, as long as they use it wisely.",
+     "why": "as long as 条件限定让观点不绝对，是观点类作文的加分表达"
+    },
+    {
+     "en": "It can summarize long articles, check our grammar and even practice spoken English with us, saving us a great deal of time.",
+     "why": "三个并列动词 + 现在分词收尾，一句装下多个信息点"
+    },
+    {
+     "en": "We should treat AI as an assistant rather than a substitute for our own brains.",
+     "why": "assistant / substitute 对比精准，可直接迁移到手机、网络等话题"
+    }
+   ]
+  },
+  {
+   "id": "essay-night-running",
+   "level": "四级",
+   "type": "现象解释类",
+   "title": "校园夜跑为何流行？",
+   "prompt": "Directions: For this part, you are allowed 30 minutes to write a short essay on why night running is becoming popular among college students. You are supposed to analyze the reasons and give your comment. You will write at least 120 words but no more than 180 words.",
+   "gist": "现象：大学生流行夜跑。原因：门槛低、减压。评论：健康趋势，但要注意安全。",
+   "body": "These days, if you walk around a university campus after dinner, you are very likely to see groups of students running on the playground. This trend, known as \"night running\", is gaining popularity for several reasons.\n\nTo begin with, running is one of the easiest ways to keep fit. Unlike ball games, it requires no equipment and no teammates, so anyone can start at once. In addition, college students are under heavy pressure from study, and running offers a good way to relax. After an hour of exercise, they feel refreshed and can focus better on their work.\n\nAs far as I am concerned, the popularity of night running is a healthy trend. However, safety should never be ignored: students should avoid running alone in dark or remote areas.\n\nIn a word, night running benefits both the body and the mind, and it deserves to be encouraged on campus.",
+   "structure": [
+    "开头（第 1 段）：白描现象场景，比直接下定义更生动",
+    "原因一（第 2 段前）：门槛低——与球类对比论证",
+    "原因二（第 2 段后）：减压——运动后的状态作支撑",
+    "评论（第 3 段）：先定性 healthy trend，再补一个 safety 注意点",
+    "结尾（第 4 段）：双受益 + 值得鼓励，一句话收束"
+   ],
+   "highlights": [
+    {
+     "en": "This trend, known as \"night running\", is gaining popularity for several reasons.",
+     "why": "known as 点出概念，for several reasons 明确下文结构"
+    },
+    {
+     "en": "Unlike ball games, it requires no equipment and no teammates, so anyone can start at once.",
+     "why": "Unlike 对比 + so 因果，一句把「门槛低」讲透"
+    },
+    {
+     "en": "In a word, night running benefits both the body and the mind, and it deserves to be encouraged on campus.",
+     "why": "body and mind 对仗，deserve to be done 收尾表态"
+    }
+   ]
+  },
+  {
+   "id": "essay-lifelong-learning",
+   "level": "六级",
+   "type": "观点类",
+   "title": "终身学习：不再是选择题",
+   "prompt": "Directions: For this part, you are allowed 30 minutes to write an essay on the importance of lifelong learning. You are supposed to analyze why it matters and give your suggestions. You will write at least 150 words but no more than 200 words.",
+   "gist": "观点：知识更新快，终身学习是必需而非选择。原因：防落伍、开新可能。建议：把学习变成习惯。",
+   "body": "It is often said that graduation marks the end of education. However, in today's fast-changing world, this idea no longer holds true. More and more people have come to realize that learning is a lifelong journey.\n\nThere are two main reasons for this shift. For one thing, knowledge is being updated at an astonishing speed. Skills that are valuable today may become outdated in only a few years, so stopping learning means falling behind. For another, lifelong learning opens up new possibilities. A programmer may learn design to enrich his work, and a teacher may study psychology to understand her students better. In both cases, learning adds color and choice to life.\n\nFrom my perspective, the best way to keep learning is to make it a habit rather than a task. Reading for half an hour every day or taking an online course can make a big difference over time.\n\nIn conclusion, lifelong learning is not an option but a necessity in the modern world. Only by keeping our minds open and curious can we keep pace with the times.",
+   "structure": [
+    "开头（第 1 段）：先立旧观念再推翻，this idea no longer holds true 转折有力",
+    "论点一（第 2 段前）：知识更新快——For one thing",
+    "论点二（第 2 段后）：打开新可能——For another，两职业对比例子",
+    "建议（第 3 段）：a habit rather than a task，给两个可操作建议",
+    "结尾（第 4 段）：not... but... 收束 + 倒装句升华"
+   ],
+   "highlights": [
+    {
+     "en": "However, in today's fast-changing world, this idea no longer holds true.",
+     "why": "no longer holds true（不再成立）是反驳陈旧观念的万能句"
+    },
+    {
+     "en": "A programmer may learn design to enrich his work, and a teacher may study psychology to understand her students better.",
+     "why": "对称排比的举例方式，一句给出两个例子"
+    },
+    {
+     "en": "Only by keeping our minds open and curious can we keep pace with the times.",
+     "why": "Only by... 倒装结尾，可直接背下来迁移到任何「重要性」话题"
+    }
+   ]
+  },
+  {
+   "id": "essay-actions",
+   "level": "六级",
+   "type": "名言评论类",
+   "title": "Actions speak louder than words",
+   "prompt": "Directions: For this part, you are allowed 30 minutes to write an essay commenting on the saying \"Actions speak louder than words.\" You should explain its meaning and give examples to support your view. You will write at least 150 words but no more than 200 words.",
+   "gist": "释义：做的比说的更有说服力。论证：空谈易、实干难，正反学生例子 + 屠呦呦事例。结论：用行动代替言语。",
+   "body": "There is an old saying that actions speak louder than words, which means what people do is more convincing than what they say. Simple as the saying is, it conveys a profound truth about success.\n\nWords are easy, but actions are hard. We can make grand plans and promises, yet without putting them into practice, nothing will be achieved. A student who keeps saying he will work harder but never opens his book will end up with nothing; in contrast, a student who studies a little every day will make steady progress. A case in point is Tu Youyou, who tested more than two hundred herbal extracts before finally discovering artemisinin. It was her countless experiments, not her words, that saved millions of lives.\n\nTherefore, instead of talking about our dreams, we should take concrete steps toward them, however small these steps may be.\n\nIn a word, let our actions, not our words, speak for us.",
+   "structure": [
+    "开头（第 1 段）：引名言 + 释义 + Simple as... 强调其深刻",
+    "论证（第 2 段前）：空谈易、实干难的总起句",
+    "论证（第 2 段中）：正反两个学生对比，in contrast 转折",
+    "论证（第 2 段后）：屠呦呦事例，not... but... 强调句收束论证",
+    "建议+结尾（第 3、4 段）：落到行动号召，首尾呼应"
+   ],
+   "highlights": [
+    {
+     "en": "Simple as the saying is, it conveys a profound truth about success.",
+     "why": "Simple as... 倒装让步，名言评论类开头万能句"
+    },
+    {
+     "en": "A student who keeps saying he will work harder but never opens his book will end up with nothing; in contrast, a student who studies a little every day will make steady progress.",
+     "why": "一长句完成正反对比，名言题的省力论证法"
+    },
+    {
+     "en": "It was her countless experiments, not her words, that saved millions of lives.",
+     "why": "强调句 It was... that... 直接回应名言，屠呦呦例子可复用"
+    }
+   ]
+  }
+ ]
+}
