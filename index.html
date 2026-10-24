@@ -13,6 +13,7 @@
       <button class="tab-btn active" data-tab="words">背单词</button>
       <button class="tab-btn" data-tab="listening">每日听力</button>
       <button class="tab-btn" data-tab="writing">写作</button>
+      <button class="tab-btn" data-tab="translation">翻译</button>
       <button class="tab-btn" data-tab="resources">资源导航</button>
       <button class="tab-btn" data-tab="stats">我的统计</button>
     </nav>
@@ -106,12 +107,31 @@
       </div>
     </section>
 
-    <!-- Tab 4 资源导航 -->
+    <!-- Tab 4 翻译 -->
+    <section id="tab-translation" class="tab-panel">
+      <div class="card">
+        <h2>🎯 翻译得分要点</h2>
+        <ul id="translation-tips" class="essay-list translation-tips"></ul>
+      </div>
+      <div class="card">
+        <h2>📝 汉译英练习</h2>
+        <p class="muted small">先看中文和图片自己默译，再点开参考译文对照。专有名词和易错点都列在每篇下面；每个题材 2 篇。</p>
+        <div class="learned-toolbar">
+          <select id="translation-filter">
+            <option value="all">全部题材</option>
+          </select>
+          <span id="translation-progress" class="muted small"></span>
+        </div>
+        <div id="translation-list"></div>
+      </div>
+    </section>
+
+    <!-- Tab 5 资源导航 -->
     <section id="tab-resources" class="tab-panel">
       <div id="resource-grid" class="resource-grid"></div>
     </section>
 
-    <!-- Tab 5 我的统计 -->
+    <!-- Tab 6 我的统计 -->
     <section id="tab-stats" class="tab-panel">
       <div class="stats-summary" id="stats-summary"></div>
       <div class="card">

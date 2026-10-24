@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="wedbg" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#7f1d1d"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#wedbg)"/>
+  <!-- 金边框 -->
+  <rect x="24" y="24" width="752" height="402" fill="none" stroke="#fbbf24" stroke-width="4" opacity="0.7"/>
+  <!-- 双喜 -->
+  <text x="400" y="290" text-anchor="middle" font-family="Songti SC, STSong, serif" font-size="230" fill="#fde68a">囍</text>
+  <!-- 两侧灯笼点缀 -->
+  <g transform="translate(110 120)">
+    <ellipse cx="0" cy="0" rx="42" ry="52" fill="#f87171"/>
+    <rect x="-16" y="-62" width="32" height="12" rx="4" fill="#fbbf24"/>
+    <rect x="-16" y="50" width="32" height="10" rx="4" fill="#fbbf24"/>
+    <line x1="0" y1="60" x2="0" y2="86" stroke="#fbbf24" stroke-width="4"/>
+  </g>
+  <g transform="translate(690 120)">
+    <ellipse cx="0" cy="0" rx="42" ry="52" fill="#f87171"/>
+    <rect x="-16" y="-62" width="32" height="12" rx="4" fill="#fbbf24"/>
+    <rect x="-16" y="50" width="32" height="10" rx="4" fill="#fbbf24"/>
+    <line x1="0" y1="60" x2="0" y2="86" stroke="#fbbf24" stroke-width="4"/>
+  </g>
+  <circle cx="400" cy="392" r="5" fill="#fbbf24"/>
+  <circle cx="360" cy="392" r="4" fill="#fbbf24" opacity="0.7"/>
+  <circle cx="440" cy="392" r="4" fill="#fbbf24" opacity="0.7"/>
+</svg>

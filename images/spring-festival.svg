@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#fecaca"/>
+      <stop offset="55%" stop-color="#b91c1c"/>
+      <stop offset="100%" stop-color="#7f1d1d"/>
+    </radialGradient>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#450a0a"/>
+      <stop offset="100%" stop-color="#881337"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#night)"/>
+  <circle cx="640" cy="90" r="46" fill="#fde68a" opacity="0.9"/>
+  <circle cx="640" cy="90" r="60" fill="#fde68a" opacity="0.18"/>
+  <!-- 大灯笼 -->
+  <g transform="translate(330 235)">
+    <ellipse cx="0" cy="0" rx="130" ry="110" fill="url(#glow)"/>
+    <path d="M-130 0 A130 110 0 0 0 130 0" fill="#7f1d1d" opacity="0.25"/>
+    <ellipse cx="-45" cy="-35" rx="42" ry="30" fill="#fff" opacity="0.18"/>
+    <rect x="-50" y="-128" width="100" height="22" rx="6" fill="#fbbf24"/>
+    <rect x="-50" y="106" width="100" height="20" rx="6" fill="#fbbf24"/>
+    <line x1="0" y1="126" x2="0" y2="168" stroke="#fbbf24" stroke-width="5"/>
+    <path d="M-14 168 L14 168 L8 205 L-8 205 Z" fill="#ef4444"/>
+  </g>
+  <!-- 小灯笼 -->
+  <g transform="translate(610 300) scale(0.55)">
+    <ellipse cx="0" cy="0" rx="120" ry="100" fill="#ef4444"/>
+    <ellipse cx="-40" cy="-30" rx="38" ry="26" fill="#fff" opacity="0.16"/>
+    <rect x="-46" y="-116" width="92" height="20" rx="6" fill="#fbbf24"/>
+    <rect x="-46" y="96" width="92" height="18" rx="6" fill="#fbbf24"/>
+    <line x1="0" y1="114" x2="0" y2="150" stroke="#fbbf24" stroke-width="5"/>
+    <path d="M-13 150 L13 150 L7 184 L-7 184 Z" fill="#f87171"/>
+  </g>
+  <text x="400" y="420" text-anchor="middle" font-family="serif" font-size="34" fill="#fca5a5" opacity="0.9">春</text>
+</svg>

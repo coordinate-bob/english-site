@@ -619,7 +619,120 @@
     }
   }
 
-  /* ================= 模块 E：我的统计 ================= */
+  /* ================= 模块 E：翻译 ================= */
+  var TRANSLATION = { tips: [], passages: [] };
+  var translationFailed = false;
+  var translationDone = read('translation-done', {}); // 段落 id → true，已掌握标记
+  var translationOpen = {}; // 段落展开状态；未记录默认第一篇展开
+
+  function translationTermsHtml(terms) {
+    return terms.map(function (t) {
+      return '<span class="term"><b>' + escapeHtml(t.zh) + '</b> ' + escapeHtml(t.en) +
+        (t.note ? '<i class="muted">（' + escapeHtml(t.note) + '）</i>' : '') + '</span>';
+    }).join('');
+  }
+
+  function renderTranslationTips() {
+    var el = document.getElementById('translation-tips');
+    if (!el || !TRANSLATION.tips.length) return;
+    el.innerHTML = TRANSLATION.tips.map(function (t) { return '<li>' + escapeHtml(t) + '</li>'; }).join('');
+  }
+
+  function renderTranslation() {
+    var listEl = document.getElementById('translation-list');
+    var progEl = document.getElementById('translation-progress');
+    var filterSel = document.getElementById('translation-filter');
+    renderTranslationTips();
+    if (!listEl) return;
+    if (translationFailed) {
+      listEl.innerHTML = '<p class="muted">翻译练习（data/translation.json）加载失败，请刷新重试。</p>';
+      if (progEl) progEl.textContent = '';
+      return;
+    }
+    if (!TRANSLATION.passages.length) return; // 加载中，暂不渲染
+    if (!filterSel.dataset.built) {
+      var seen = {};
+      TRANSLATION.passages.forEach(function (p) {
+        if (seen[p.topic]) return;
+        seen[p.topic] = true;
+        var opt = document.createElement('option');
+        opt.value = p.topic;
+        opt.textContent = p.topic;
+        filterSel.appendChild(opt);
+      });
+      filterSel.dataset.built = '1';
+    }
+    var filter = filterSel.value;
+    var total = TRANSLATION.passages.length;
+    var doneCount = TRANSLATION.passages.filter(function (p) { return translationDone[p.id]; }).length;
+    progEl.textContent = '已掌握 ' + doneCount + '/' + total;
+    var topicOrder = [], byTopic = {};
+    TRANSLATION.passages.forEach(function (p) {
+      if (filter !== 'all' && filter !== p.topic) return;
+      if (!byTopic[p.topic]) { byTopic[p.topic] = []; topicOrder.push(p.topic); }
+      byTopic[p.topic].push(p);
+    });
+    listEl.innerHTML = '';
+    topicOrder.forEach(function (topic) {
+      byTopic[topic].forEach(function (p, i) {
+        var open = translationOpen[p.id] !== undefined ? translationOpen[p.id] : i === 0;
+        var done = !!translationDone[p.id];
+        var tips = p.tips.map(function (t) { return '<li>' + escapeHtml(t) + '</li>'; }).join('');
+        var group = document.createElement('div');
+        group.className = 'day-group';
+        group.innerHTML = '<button type="button" class="day-header" data-trans="' + escapeHtml(p.id) + '">' +
+          '<span class="day-caret">' + (open ? '▾' : '▸') + '</span>' +
+          '<span class="day-title">' + escapeHtml(p.title) + '</span>' +
+          (done ? '<span class="done-badge">✓ 已掌握</span>' : '') +
+          '</button>' +
+          '<div class="day-body trans-body' + (open ? '' : ' hidden') + '">' +
+          '<img class="trans-img" src="' + escapeHtml(p.image) + '" alt="' + escapeHtml(p.title) + '" loading="lazy">' +
+          '<p class="trans-topic muted small">题材：' + escapeHtml(p.topic) + '</p>' +
+          '<p class="trans-zh">' + escapeHtml(p.zh) + '</p>' +
+          '<button type="button" class="btn btn-ghost btn-small trans-reveal-btn" data-reveal="' + escapeHtml(p.id) + '">显示参考译文</button>' +
+          '<div class="trans-en hidden" id="trans-en-' + escapeHtml(p.id) + '">' + escapeHtml(p.en) + '</div>' +
+          '<div class="trans-terms"><span class="muted small">重点词汇：</span>' + translationTermsHtml(p.terms) + '</div>' +
+          '<ul class="essay-list trans-tips">' + tips + '</ul>' +
+          '<button type="button" class="btn btn-small trans-done-btn' + (done ? ' done' : '') + '" data-done="' + escapeHtml(p.id) + '">' +
+          (done ? '✓ 已掌握（点击取消）' : '标记为已掌握') + '</button>' +
+          '</div>';
+        listEl.appendChild(group);
+      });
+    });
+  }
+
+  // 事件委托：展开/收起、显示/隐藏参考译文、标记掌握
+  function onTranslationClick(e) {
+    var revealBtn = e.target.closest('.trans-reveal-btn');
+    if (revealBtn) {
+      var rid = revealBtn.dataset.reveal;
+      var enEl = document.getElementById('trans-en-' + rid);
+      var willShow = enEl.classList.contains('hidden');
+      enEl.classList.toggle('hidden', !willShow);
+      revealBtn.textContent = willShow ? '隐藏参考译文' : '显示参考译文';
+      return;
+    }
+    var doneBtn = e.target.closest('.trans-done-btn');
+    if (doneBtn) {
+      var did = doneBtn.dataset.done;
+      if (translationDone[did]) delete translationDone[did];
+      else translationDone[did] = true;
+      write('translation-done', translationDone);
+      renderTranslation();
+      return;
+    }
+    var header = e.target.closest('.day-header[data-trans]');
+    if (header) {
+      var tid = header.dataset.trans;
+      var body = header.parentElement.querySelector('.day-body');
+      var willOpen = body.classList.contains('hidden');
+      translationOpen[tid] = willOpen;
+      body.classList.toggle('hidden', !willOpen);
+      header.querySelector('.day-caret').textContent = willOpen ? '▾' : '▸';
+    }
+  }
+
+  /* ================= 模块 F：我的统计 ================= */
   function dayLevel(n) {
     if (n <= 0) return 0;
     if (n < 5) return 1;
@@ -856,6 +969,7 @@
     if (name === 'words') renderWordsTab();
     else if (name === 'listening') renderListening();
     else if (name === 'writing') renderWriting();
+    else if (name === 'translation') renderTranslation();
     else if (name === 'stats') {
       // 统计需要两个词表的总词条数，按需加载后刷新一次汇总
       Promise.all([ensureWords('cet4'), ensureWords('cet6')]).then(function () {
@@ -909,6 +1023,9 @@
 
     document.getElementById('tab-writing').addEventListener('click', onWritingClick);
     document.getElementById('sentence-filter').addEventListener('change', renderSentences);
+
+    document.getElementById('tab-translation').addEventListener('click', onTranslationClick);
+    document.getElementById('translation-filter').addEventListener('change', renderTranslation);
   }
 
   function init() {
@@ -934,6 +1051,13 @@
     }).catch(function () {
       writingFailed = true;
       renderWriting();
+    });
+    loadJson('data/translation.json').then(function (d) {
+      TRANSLATION = d;
+      renderTranslation();
+    }).catch(function () {
+      translationFailed = true;
+      renderTranslation();
     });
     renderWordsTab();
   }

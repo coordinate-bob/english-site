@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="railbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#railbg)"/>
+  <!-- 远处城市剪影 -->
+  <g fill="#bae6fd">
+    <rect x="40" y="180" width="60" height="140"/>
+    <rect x="120" y="140" width="50" height="180"/>
+    <rect x="190" y="200" width="46" height="120"/>
+    <rect x="600" y="150" width="56" height="170"/>
+    <rect x="672" y="190" width="44" height="130"/>
+    <rect x="730" y="120" width="50" height="200"/>
+  </g>
+  <!-- 轨道 -->
+  <rect y="320" width="800" height="10" fill="#94a3b8"/>
+  <rect y="356" width="800" height="10" fill="#94a3b8"/>
+  <g fill="#cbd5e1">
+    <rect x="20" y="330" width="30" height="26"/><rect x="90" y="330" width="30" height="26"/>
+    <rect x="160" y="330" width="30" height="26"/><rect x="230" y="330" width="30" height="26"/>
+    <rect x="300" y="330" width="30" height="26"/><rect x="370" y="330" width="30" height="26"/>
+    <rect x="440" y="330" width="30" height="26"/><rect x="510" y="330" width="30" height="26"/>
+    <rect x="580" y="330" width="30" height="26"/><rect x="650" y="330" width="30" height="26"/>
+    <rect x="720" y="330" width="30" height="26"/>
+  </g>
+  <!-- 高铁车头 -->
+  <g transform="translate(430 236)">
+    <path d="M-330 40 Q-330 -34 -200 -38 L140 -38 Q260 -34 300 10 Q312 24 300 34 Q260 50 140 52 L-200 52 Q-330 50 -330 40 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="4"/>
+    <!-- 蓝色腰线 -->
+    <path d="M-328 26 L296 22 Q306 26 298 34 Q250 50 130 52 L-200 52 Q-320 50 -328 44 Z" fill="#2563eb"/>
+    <!-- 车窗 -->
+    <path d="M-180 -24 L40 -24 Q44 0 30 4 L-180 4 Q-196 0 -180 -24 Z" fill="#0c4a6e"/>
+    <path d="M70 -24 L130 -24 Q150 -22 150 -8 L78 -8 Q66 -12 70 -24 Z" fill="#0c4a6e"/>
+    <!-- 车头灯 -->
+    <ellipse cx="282" cy="6" rx="10" ry="6" fill="#fde68a"/>
+  </g>
+  <!-- 速度线 -->
+  <g stroke="#7dd3fc" stroke-width="8" stroke-linecap="round" opacity="0.8">
+    <line x1="30" y1="200" x2="150" y2="200"/>
+    <line x1="10" y1="232" x2="110" y2="232"/>
+    <line x1="46" y1="264" x2="140" y2="264"/>
+  </g>
+  <text x="400" y="418" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#0369a1" opacity="0.7">CR400 · Fuxing</text>
+</svg>

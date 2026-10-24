@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#dusk)"/>
+  <!-- 广场地面 -->
+  <rect y="360" width="800" height="90" fill="#d6d3d1"/>
+  <rect y="360" width="800" height="8" fill="#a8a29e"/>
+  <!-- 主殿 -->
+  <g transform="translate(400 210)">
+    <!-- 台基 -->
+    <rect x="-170" y="130" width="340" height="34" fill="#e7e5e4" stroke="#a8a29e" stroke-width="3"/>
+    <rect x="-150" y="104" width="300" height="28" fill="#f5f5f4" stroke="#a8a29e" stroke-width="3"/>
+    <!-- 殿身 -->
+    <rect x="-118" y="34" width="236" height="72" fill="#b91c1c"/>
+    <rect x="-100" y="46" width="26" height="60" fill="#7f1d1d"/>
+    <rect x="-13" y="46" width="26" height="60" fill="#7f1d1d"/>
+    <rect x="74" y="46" width="26" height="60" fill="#7f1d1d"/>
+    <!-- 黄瓦屋顶（两层，飞檐翘角） -->
+    <path d="M-150 36 Q-146 12 -96 4 L96 4 Q146 12 150 36 L118 30 L0 22 L-118 30 Z" fill="#f59e0b"/>
+    <path d="M-96 4 L96 4 L0 -14 Z" fill="#fbbf24"/>
+    <rect x="-8" y="-30" width="16" height="18" rx="4" fill="#f59e0b"/>
+  </g>
+  <!-- 两侧配殿 -->
+  <g transform="translate(120 268) scale(0.62)">
+    <rect x="-100" y="96" width="200" height="26" fill="#e7e5e4" stroke="#a8a29e" stroke-width="4"/>
+    <rect x="-78" y="30" width="156" height="68" fill="#b91c1c"/>
+    <path d="M-104 32 Q-100 8 -60 2 L60 2 Q100 8 104 32 L0 22 Z" fill="#f59e0b"/>
+  </g>
+  <g transform="translate(680 268) scale(0.62)">
+    <rect x="-100" y="96" width="200" height="26" fill="#e7e5e4" stroke="#a8a29e" stroke-width="4"/>
+    <rect x="-78" y="30" width="156" height="68" fill="#b91c1c"/>
+    <path d="M-104 32 Q-100 8 -60 2 L60 2 Q100 8 104 32 L0 22 Z" fill="#f59e0b"/>
+  </g>
+  <!-- 宫墙 -->
+  <rect y="330" width="90" height="40" fill="#991b1b"/>
+  <rect x="710" y="330" width="90" height="40" fill="#991b1b"/>
+  <rect y="322" width="90" height="10" fill="#fbbf24"/>
+  <rect x="710" y="322" width="90" height="10" fill="#fbbf24"/>
+</svg>

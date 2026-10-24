@@ -79,3 +79,16 @@ ECDICT 每行一个词，含 `word / phonetic / translation / pos / tag` 等列�
 
 站点对句型的「已背」标记存于浏览器 localStorage（`eng-writing-memorized`），与本文件无关。
 
+## translation.json（翻译练习）
+
+供「翻译」栏目使用，全部为**人工原创**内容（非摘自真题或出版物），共两部分：
+
+- **tips（得分要点）**：**5** 条，对应栏目顶部卡片（短句化、专有名词、不逐字直译、降级表达、检查清单）
+- **passages（练习段落）**：**10** 篇，覆盖四六级翻译五大题材——传统文化、历史景点、社会习俗、中国发展、地理特产，每个题材 2 篇。字段 `{ "id", "topic", "title", "image", "zh", "en", "terms", "tips" }`；`zh` 为待译中文段落（120–160 字），`en` 为参考译文，`terms` 为本篇专有名词/重点词（`{ "zh", "en", "note" }`），`tips` 为针对本篇的翻译手法提示
+
+配图在 `../images/` 目录，为**本站原创手绘 SVG 插画**（`spring-festival / tea / great-wall / forbidden-city / chopsticks / wedding / high-speed-rail / mobile-payment / guilin / porcelain`，与 passage 的 `image` 字段一一对应），无任何版权问题，可自由修改。
+
+站点对段落的「已掌握」标记存于浏览器 localStorage（`eng-translation-done`），与本文件无关。
+
+> 备注：原计划改用 Wikimedia Commons 等图库照片，但本机网络无法访问这些站点，故改用原创 SVG；日后如需换真实照片，替换 `images/` 下对应文件并在本文件中更新 `image` 路径即可。
+

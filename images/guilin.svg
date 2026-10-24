@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="55%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#mist)"/>
+  <!-- 远山 -->
+  <g fill="#93c5fd" opacity="0.55">
+    <path d="M60 250 Q110 180 160 250 Z"/>
+    <path d="M140 250 Q210 150 280 250 Z"/>
+    <path d="M560 250 Q620 170 680 250 Z"/>
+  </g>
+  <!-- 喀斯特峰丛（圆润的锥形峰） -->
+  <g fill="#60a5fa" opacity="0.8">
+    <path d="M240 300 Q270 190 310 300 Z"/>
+    <path d="M300 300 Q350 160 400 300 Z"/>
+    <path d="M390 300 Q430 200 470 300 Z"/>
+    <path d="M460 300 Q510 170 560 300 Z"/>
+  </g>
+  <g fill="#3b82f6" opacity="0.9">
+    <path d="M180 330 Q230 210 290 330 Z"/>
+    <path d="M330 330 Q390 190 450 330 Z"/>
+    <path d="M440 330 Q500 220 560 330 Z"/>
+  </g>
+  <!-- 江面 -->
+  <rect y="330" width="800" height="120" fill="#7dd3fc"/>
+  <rect y="330" width="800" height="10" fill="#bae6fd"/>
+  <!-- 倒影 -->
+  <g opacity="0.35" fill="#3b82f6">
+    <path d="M330 352 Q390 420 450 352 Z"/>
+    <path d="M180 352 Q230 400 290 352 Z"/>
+    <path d="M440 352 Q500 396 560 352 Z"/>
+  </g>
+  <!-- 小船 -->
+  <g transform="translate(610 396)">
+    <path d="M-46 0 L46 0 L28 16 L-28 16 Z" fill="#92400e"/>
+    <line x1="0" y1="0" x2="0" y2="-34" stroke="#78350f" stroke-width="4"/>
+    <path d="M2 -32 Q26 -22 2 -8 Z" fill="#fde68a"/>
+  </g>
+  <!-- 云雾 -->
+  <ellipse cx="180" cy="120" rx="130" ry="26" fill="#fff" opacity="0.7"/>
+  <ellipse cx="520" cy="86" rx="150" ry="24" fill="#fff" opacity="0.6"/>
+  <ellipse cx="660" cy="150" rx="100" ry="20" fill="#fff" opacity="0.5"/>
+</svg>

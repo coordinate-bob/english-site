@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="porbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#porbg)"/>
+  <!-- 展架 -->
+  <rect y="368" width="800" height="82" fill="#bfdbfe"/>
+  <rect y="368" width="800" height="10" fill="#93c5fd"/>
+  <!-- 青花大瓶 -->
+  <g transform="translate(330 210)">
+    <path d="M-18 -150 L18 -150 L14 -118 Q70 -96 76 -20 Q80 60 34 96 Q18 108 0 108 Q-18 108 -34 96 Q-80 60 -76 -20 Q-70 -96 -14 -118 Z" fill="#f8fafc" stroke="#1e40af" stroke-width="5"/>
+    <!-- 瓶口与颈部青花纹 -->
+    <rect x="-20" y="-150" width="40" height="14" fill="#1e40af"/>
+    <rect x="-19" y="-128" width="38" height="7" fill="#1e40af" opacity="0.85"/>
+    <!-- 腹部缠枝莲纹 -->
+    <g stroke="#1e40af" stroke-width="4" fill="none" opacity="0.9">
+      <path d="M-60 -20 q30 -26 60 0 q30 26 60 0"/>
+      <path d="M-64 22 q32 -26 64 0 q32 26 64 0"/>
+      <path d="M-52 60 q26 -22 52 0 q26 22 52 0"/>
+    </g>
+    <g fill="#1e40af">
+      <circle cx="-30" cy="-14" r="7"/><circle cx="26" cy="-12" r="7"/>
+      <circle cx="-2" cy="28" r="7"/><circle cx="-42" cy="30" r="6"/><circle cx="42" cy="30" r="6"/>
+      <circle cx="0" cy="66" r="6"/>
+    </g>
+    <!-- 底部莲瓣纹 -->
+    <path d="M-36 92 q36 18 72 0 l-4 10 q-32 14 -64 0 Z" fill="#1e40af" opacity="0.85"/>
+  </g>
+  <!-- 青花小碗 -->
+  <g transform="translate(585 330)">
+    <path d="M-58 -14 A58 58 0 0 0 58 -14 Z" fill="#f8fafc" stroke="#1e40af" stroke-width="4"/>
+    <ellipse cx="0" cy="-14" rx="58" ry="11" fill="#eff6ff" stroke="#1e40af" stroke-width="4"/>
+    <path d="M-40 8 q40 20 80 0" stroke="#1e40af" stroke-width="4" fill="none"/>
+  </g>
+  <!-- 梅花枝点缀 -->
+  <g transform="translate(120 130)">
+    <path d="M0 90 Q40 40 110 18" stroke="#78350f" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <g fill="#ef4444">
+      <circle cx="110" cy="18" r="9"/><circle cx="86" cy="40" r="7"/>
+      <circle cx="56" cy="52" r="8"/><circle cx="34" cy="66" r="6"/>
+    </g>
+  </g>
+</svg>

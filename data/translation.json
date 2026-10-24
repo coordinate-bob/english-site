@@ -1,0 +1,193 @@
+{
+ "tips": [
+  "短句化：长句拆成 2–3 个短句，每句保证主谓完整，阅卷优先看语法正确",
+  "专有名词要准确：背固定译法（春节 the Spring Festival、长城 the Great Wall），实在不会就写拼音并简短解释",
+  "不要逐字直译：先想“这句话英语习惯怎么说”，再落笔，而不是把汉字一一对应",
+  "遇到不会的词就降级换简单表达：比如“蜿蜒流过”不会写，就说 flows through——通顺比高级更重要",
+  "写完全篇留 2 分钟检查：时态、第三人称单数、单复数、冠词 a/the"
+ ],
+ "passages": [
+  {
+   "id": "trans-spring-festival",
+   "topic": "传统文化",
+   "title": "春节",
+   "image": "images/spring-festival.svg",
+   "zh": "春节是中国最重要的传统节日，标志着农历新年的开始。除夕之夜，全家人团聚在一起吃年夜饭，席间往往有鱼，因为“鱼”与“余”同音，寓意年年有余。长辈还会给晚辈发红包，祝愿他们新的一年平安顺遂。如今，越来越多的中国人选择通过旅行或看春晚来庆祝春节，但阖家团圆始终是节日不变的主题。",
+   "en": "The Spring Festival is the most important traditional holiday in China, marking the beginning of the lunar new year. On New Year's Eve, the whole family gets together for a reunion dinner. Fish is often served, because the Chinese word for \"fish\" sounds like \"yu\", meaning surplus, which symbolizes abundance year after year. Elders also give red envelopes to the younger generation, wishing them peace and good fortune in the coming year. Nowadays, more and more Chinese people celebrate the festival by traveling or watching the Spring Festival Gala, but family reunion remains the constant theme of the holiday.",
+   "terms": [
+    { "zh": "春节", "en": "the Spring Festival", "note": "固定译法，首字母大写" },
+    { "zh": "农历", "en": "the lunar calendar", "note": "农历新年 the lunar new year" },
+    { "zh": "年夜饭", "en": "the reunion dinner", "note": "也可说 Chinese New Year's Eve dinner" },
+    { "zh": "红包", "en": "red envelope", "note": "给红包 give red envelopes" },
+    { "zh": "春晚", "en": "the Spring Festival Gala", "note": "中央电视台主办，常加 CCTV" }
+   ],
+   "tips": [
+    "“鱼与余同音”不要硬译双关：用 sounds like + meaning 把谐音的意思解释出来即可",
+    "长句“长辈还会给晚辈发红包，祝愿……”拆成主句 + 现在分词短语 wishing..."
+   ]
+  },
+  {
+   "id": "trans-tea",
+   "topic": "传统文化",
+   "title": "中国茶文化",
+   "image": "images/tea.svg",
+   "zh": "茶起源于中国，已有数千年历史。中国人不仅把茶当作日常饮品，还形成了独特的茶文化。泡茶讲究水温、茶叶和茶具的搭配，不同地区的人喜欢的茶也各不相同：北方人多饮花茶，南方人偏爱绿茶，而福建、广东一带则流行乌龙茶。对许多中国人来说，品茶不仅是解渴，更是一种放松身心、招待客人的方式。",
+   "en": "Tea originated in China and has a history of several thousand years. Chinese people do not just drink tea daily; they have also developed a unique tea culture. Brewing tea requires the right combination of water temperature, tea leaves and teaware. Preferences vary from region to region: people in the north favor scented tea, those in the south prefer green tea, while oolong tea is popular in Fujian and Guangdong. For many Chinese people, sipping tea is not just about quenching thirst—it is a way to relax and to entertain guests.",
+   "terms": [
+    { "zh": "起源于", "en": "originate in", "note": "句首用过去式 originated" },
+    { "zh": "茶具", "en": "teaware", "note": "不可数；也可用 tea sets" },
+    { "zh": "花茶 / 绿茶 / 乌龙茶", "en": "scented / green / oolong tea", "note": "三种茶的固定说法" },
+    { "zh": "解渴", "en": "quench thirst", "note": "动宾搭配，常考" }
+   ],
+   "tips": [
+    "冒号后列举三个地区对比，用 while 引出最后一个最整齐",
+    "“放松身心、招待客人的方式”合并成一个 way to relax and to entertain guests，不必逐字译“身心”"
+   ]
+  },
+  {
+   "id": "trans-great-wall",
+   "topic": "历史景点",
+   "title": "长城",
+   "image": "images/great-wall.svg",
+   "zh": "长城是世界闻名的古代防御工程，也是中华民族的象征。它始建于两千多年前的春秋战国时期，秦始皇统一中国后把各段城墙连接起来。此后历代不断修筑，其中大部分现存长城是明代修建的。长城东起山海关，西至嘉峪关，全长约两万千米。如今，长城每年吸引数百万中外游客，1987年被列入《世界遗产名录》。",
+   "en": "The Great Wall is a world-famous ancient defense project and a symbol of the Chinese nation. Its construction began more than 2,000 years ago, during the Spring and Autumn Period and the Warring States Period. After unifying China, the First Emperor of Qin linked the separate walls together. Later dynasties kept rebuilding it, and most of the wall standing today dates from the Ming Dynasty. Stretching from Shanhaiguan in the east to Jiayuguan in the west, the wall is about 20,000 kilometers long. Today it attracts millions of visitors from home and abroad every year, and it was listed as a UNESCO World Heritage Site in 1987.",
+   "terms": [
+    { "zh": "防御工程", "en": "defense project", "note": "注意 defense 的拼写" },
+    { "zh": "春秋战国时期", "en": "the Spring and Autumn Period and the Warring States Period", "note": "两个时期并列，常考" },
+    { "zh": "秦始皇", "en": "the First Emperor of Qin", "note": "固定译法，避免逐字 Qin Shihuang" },
+    { "zh": "明代", "en": "the Ming Dynasty", "note": "朝代译法：the + 拼音 + Dynasty" },
+    { "zh": "世界遗产", "en": "World Heritage Site", "note": "联合国教科文组织 UNESCO 评定" }
+   ],
+   "tips": [
+    "“始建于……时期”先译 began 再补 during... 作时间状语，不要硬塞成一句",
+    "朝代名用 the + 拼音 + Dynasty 的模式，山海关、嘉峪关这类地名直接写拼音即可"
+   ]
+  },
+  {
+   "id": "trans-forbidden-city",
+   "topic": "历史景点",
+   "title": "故宫",
+   "image": "images/forbidden-city.svg",
+   "zh": "故宫又称紫禁城，位于北京市中心，是明清两代的皇家宫殿。它始建于1406年，历时十四年建成，共有宫殿七十多座、房屋九千余间。故宫建筑群沿南北中轴线对称分布，红墙黄瓦，气势恢宏，集中体现了中国古代建筑艺术的高度成就。1925年，故宫成为博物馆，如今收藏着一百八十多万件文物，是中国收藏文物最多的博物馆。",
+   "en": "The Palace Museum, also known as the Forbidden City, is located in the center of Beijing. It served as the imperial palace of the Ming and Qing dynasties. Its construction began in 1406 and took fourteen years to complete. The complex has more than seventy palaces and over nine thousand rooms. The buildings are arranged symmetrically along a central north-south axis, with red walls and yellow glazed tiles, which fully demonstrates the great achievements of ancient Chinese architecture. In 1925 it became a museum, and today it houses over 1.8 million cultural relics, making it the museum with the largest collection in China.",
+   "terms": [
+    { "zh": "故宫", "en": "the Palace Museum", "note": "景点名用 the Palace Museum；建筑群用 the Forbidden City" },
+    { "zh": "中轴线", "en": "central axis", "note": "对称分布 arranged symmetrically" },
+    { "zh": "黄瓦", "en": "yellow glazed tiles", "note": "glazed 指琉璃釉" },
+    { "zh": "文物", "en": "cultural relics", "note": "可数，常用复数" }
+   ],
+   "tips": [
+    "“又称紫禁城”用 also known as 插入语，一句话交代两个名字",
+    "最后一句“是收藏最多的博物馆”用 making it... 分词结构收尾，比再写一个 which 从句更简洁"
+   ]
+  },
+  {
+   "id": "trans-chopsticks",
+   "topic": "社会习俗",
+   "title": "餐桌礼仪",
+   "image": "images/chopsticks.svg",
+   "zh": "在中国，请客吃饭有许多讲究。客人入座时，通常请长者或贵宾坐上座。吃饭时，主人会主动给客人夹菜，以示热情，但客人不必把盘子里的菜全部吃完。使用筷子也有一些禁忌：不能把筷子插在饭碗里，也不能用筷子指着别人。碰杯时，晚辈的杯子要略低于长辈的，以表示尊敬。这些礼仪体现了中国人尊老爱幼的传统美德。",
+   "en": "In China, there are many customs to follow when treating guests to dinner. When guests are seated, the elderly or the most honored guest is usually offered the seat of honor. During the meal, the host picks up food for the guests to show hospitality, but guests are not expected to finish everything on their plates. There are also taboos about using chopsticks: never stick them upright in a bowl of rice, and never point them at others. When clinking glasses, the younger people hold their glasses slightly lower than those of the elders as a sign of respect. These manners reflect the Chinese tradition of respecting the old and caring for the young.",
+   "terms": [
+    { "zh": "上座", "en": "the seat of honor", "note": "honor 美式拼写，honour 亦可" },
+    { "zh": "夹菜", "en": "pick up food for sb.", "note": "口语化也可用 serve food to" },
+    { "zh": "禁忌", "en": "taboo", "note": "可数名词，复数 taboos" },
+    { "zh": "尊老爱幼", "en": "respect the old and care for the young", "note": "对仗结构，可直接背" }
+   ],
+   "tips": [
+    "全篇祈使句禁令用 never + 动词原形，比 You should not 更利落",
+    "“以示……”统一用 to show / as a sign of 两个短语处理，避免重复"
+   ]
+  },
+  {
+   "id": "trans-wedding",
+   "topic": "社会习俗",
+   "title": "传统婚礼",
+   "image": "images/wedding.svg",
+   "zh": "中国传统婚礼以红色为主色调，象征喜庆和吉祥。婚礼前，新郎要上门迎娶新娘，新人向双方父母敬茶，父母则回赠红包或首饰，表示接纳和祝福。婚宴上，新人挨桌向宾客敬酒，感谢他们的到来。随着时代变迁，许多年轻人选择把传统仪式与现代元素结合起来，例如旅行结婚或举办户外婚礼，但敬茶和敬酒等环节仍然被保留下来。",
+   "en": "A traditional Chinese wedding features red as its main color, which symbolizes joy and good fortune. Before the ceremony, the groom comes to fetch the bride, and the couple serve tea to both sets of parents, who give red envelopes or jewelry in return to show acceptance and blessings. At the banquet, the newlyweds go from table to table, toasting the guests and thanking them for coming. With the times changing, many young people choose to combine traditional rituals with modern elements, such as a destination wedding or an outdoor ceremony. However, rituals like serving tea and toasting are still kept today.",
+   "terms": [
+    { "zh": "以……为主色调", "en": "feature ... as the main color", "note": "feature 作动词“以……为特色”" },
+    { "zh": "新郎 / 新娘", "en": "groom / bride", "note": "一对新人 the couple / the newlyweds" },
+    { "zh": "敬茶", "en": "serve tea (to parents)", "note": " serve 比 respectfully offer 更自然" },
+    { "zh": "双方父母", "en": "both sets of parents", "note": "set 表示“（亲属的）一家”" }
+   ],
+   "tips": [
+    "全篇用一般现在时描述习俗，不要时态混乱",
+    "“旅行结婚”不会直译就写 get married while traveling，意思到位即可"
+   ]
+  },
+  {
+   "id": "trans-high-speed-rail",
+   "topic": "中国发展",
+   "title": "高速铁路",
+   "image": "images/high-speed-rail.svg",
+   "zh": "中国高铁的发展速度令世界瞩目。自2008年第一条高速铁路开通以来，中国已建成全球最大的高铁网络，营业里程超过四万千米。高铁把城市之间的旅行时间大大缩短，北京到上海最快只需四个半小时。高铁票价相对合理，车厢干净舒适，还覆盖了4G和5G网络，因此成为中国人出行的首选方式之一。中国高铁技术也已出口到多个国家，成为“中国制造”的一张名片。",
+   "en": "The rapid development of China's high-speed railway has attracted worldwide attention. Since the first high-speed line opened in 2008, China has built the largest high-speed rail network in the world, with more than 40,000 kilometers in operation. High-speed trains greatly shorten travel time between cities: the fastest journey from Beijing to Shanghai takes only four and a half hours. With reasonable fares, clean and comfortable carriages, and 4G and 5G network coverage, high-speed rail has become one of the preferred ways to travel in China. Chinese high-speed rail technology has also been exported to many countries, making it a name card of \"Made in China\".",
+   "terms": [
+    { "zh": "令世界瞩目", "en": "attract worldwide attention", "note": "也可用 gain worldwide attention" },
+    { "zh": "营业里程", "en": "kilometers in operation", "note": "in operation 运营中" },
+    { "zh": "首选方式", "en": "the preferred way", "note": "one of the preferred ways 之一" },
+    { "zh": "“中国制造”", "en": "\"Made in China\"", "note": "固定说法，加引号" }
+   ],
+   "tips": [
+    "“令世界瞩目”这类评价语放句首总起，比直译 make the world focus on 自然得多",
+    "多项优点并列（票价、车厢、网络）用 With A, B, and C 结构一句搞定"
+   ]
+  },
+  {
+   "id": "trans-mobile-payment",
+   "topic": "中国发展",
+   "title": "移动支付",
+   "image": "images/mobile-payment.svg",
+   "zh": "在中国，移动支付已经深入到日常生活的方方面面。无论是商场购物、餐厅吃饭，还是乘坐公交、缴纳水电费，人们只需拿出手机扫一扫二维码即可完成支付。移动支付的普及得益于智能手机的广泛使用和成熟的网络基础设施。它不仅方便快捷，还减少了现金的使用。与此同时，一些老年人也开始学习使用智能手机，以便跟上数字时代的步伐。",
+   "en": "In China, mobile payment has become part of everyday life. Whether people are shopping in malls, dining in restaurants, taking buses or paying utility bills, they can complete the payment simply by taking out their phones and scanning a QR code. The popularity of mobile payment is thanks to the widespread use of smartphones and well-developed network infrastructure. It is not only convenient and efficient but also reduces the use of cash. Meanwhile, some elderly people have also started to learn how to use smartphones, so that they can keep up with the digital age.",
+   "terms": [
+    { "zh": "二维码", "en": "QR code", "note": "scan a QR code 扫码" },
+    { "zh": "水电费", "en": "utility bills", "note": "utility 泛指水电气等公用事业" },
+    { "zh": "得益于", "en": "be thanks to", "note": "也可用 owe... to / benefit from" },
+    { "zh": "跟上……的步伐", "en": "keep up with", "note": "keep up with the digital age" }
+   ],
+   "tips": [
+    "“无论……还是……”用 Whether... or... 引导让步状语从句，注意从句内语序",
+    "“以便”用 so that 引导目的状语从句，主句用 have started 现在完成时呼应“开始”"
+   ]
+  },
+  {
+   "id": "trans-guilin",
+   "topic": "地理特产",
+   "title": "桂林山水",
+   "image": "images/guilin.svg",
+   "zh": "桂林位于中国广西壮族自治区东北部，是一座以山水风光闻名的旅游城市。漓江从市区蜿蜒流过，两岸奇峰林立，碧水如镜，构成了一幅天然的山水画卷。“桂林山水甲天下”这句谚语数百年来广为流传，吸引了无数中外游客。除了自然景观，桂林还有丰富的特产，如桂林米粉、辣椒酱和三花酒，深受游客喜爱。近年来，桂林注重保护生态环境，努力实现旅游业与环境保护的协调发展。",
+   "en": "Guilin, located in the northeast of Guangxi Zhuang Autonomous Region, is a tourist city famous for its landscape. The Li River winds through the city, with strange peaks standing on both banks and the clear water looking like a mirror, forming a natural painting. The saying \"Guilin's scenery is the finest under heaven\" has been passed down for centuries and attracts countless visitors from home and abroad. Besides its natural scenery, Guilin is also known for local specialties, such as Guilin rice noodles, chili sauce and Sanhua rice wine, which are loved by tourists. In recent years, Guilin has paid attention to protecting the environment and strives to develop tourism in harmony with environmental protection.",
+   "terms": [
+    { "zh": "广西壮族自治区", "en": "Guangxi Zhuang Autonomous Region", "note": "自治区 autonomous region" },
+    { "zh": "奇峰林立", "en": "strange peaks stand (along the banks)", "note": "不会写林立就写 many peaks" },
+    { "zh": "桂林山水甲天下", "en": "Guilin's scenery is the finest under heaven", "note": "常见固定译法" },
+    { "zh": "特产", "en": "local specialties", "note": "也可用 local products" }
+   ],
+   "tips": [
+    "“蜿蜒流过”用 winds through 一个词组解决，不会就降级为 flows through",
+    "开头长句“位于……，是……城市”用插入语 located in... 处理，避免头重脚轻"
+   ]
+  },
+  {
+   "id": "trans-porcelain",
+   "topic": "地理特产",
+   "title": "景德镇瓷器",
+   "image": "images/porcelain.svg",
+   "zh": "景德镇位于江西省，因瓷器而闻名于世，被称为“瓷都”。这里制瓷历史悠久，早在汉代就开始生产陶器，宋代以后瓷器工艺日趋成熟。景德镇瓷器以“白如玉、明如镜、薄如纸、声如磬”著称，品种繁多，远销世界各地。青花瓷是最具代表性的品种之一，蓝白相间的图案典雅大方，深受人们喜爱。如今，景德镇在传统工艺的基础上不断创新，古老的制瓷技艺焕发出新的生机。",
+   "en": "Jingdezhen, located in Jiangxi Province, is world-famous for porcelain and is known as the \"Porcelain Capital\". It has a long history of porcelain making: pottery production began as early as the Han Dynasty, and the craft matured after the Song Dynasty. Jingdezhen porcelain is famous for its jade-like whiteness, mirror-like brightness, paper-like thinness and chime-like sound. It comes in a great variety and is sold all over the world. Blue and white porcelain is one of the most representative types, and its elegant blue-and-white patterns are widely loved. Today, Jingdezhen keeps innovating on the basis of traditional techniques, bringing new vitality to the ancient craft.",
+   "terms": [
+    { "zh": "瓷都", "en": "the Porcelain Capital", "note": "capital 大写首字母，与 capital 首都同源" },
+    { "zh": "早在汉代", "en": "as early as the Han Dynasty", "note": "as early as 强调“早”" },
+    { "zh": "青花瓷", "en": "blue and white porcelain", "note": "固定译法" },
+    { "zh": "在……基础上", "en": "on the basis of", "note": "常用搭配" }
+   ],
+   "tips": [
+    "“白如玉、明如镜、薄如纸、声如磬”四个比喻拆成 jade-like / mirror-like / paper-like / chime-like 并列，一句收拢",
+    "朝代统一用 the Han/Song Dynasty 模式；“远销”不会就用 is sold all over the world 降级表达"
+   ]
+  }
+ ]
+}

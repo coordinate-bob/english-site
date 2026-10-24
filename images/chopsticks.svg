@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="dine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff7ed"/>
+      <stop offset="100%" stop-color="#ffedd5"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#dine)"/>
+  <!-- 圆桌 -->
+  <ellipse cx="400" cy="392" rx="360" ry="46" fill="#d97706"/>
+  <ellipse cx="400" cy="382" rx="360" ry="46" fill="#f59e0b"/>
+  <!-- 米饭碗 -->
+  <g transform="translate(330 300)">
+    <path d="M-95 0 A95 95 0 0 0 95 0 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="4"/>
+    <path d="M-95 0 A95 95 0 0 0 95 0" fill="none" stroke="#cbd5e1" stroke-width="4"/>
+    <ellipse cx="0" cy="0" rx="95" ry="16" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="4"/>
+    <!-- 米饭 -->
+    <g fill="#ffffff" stroke="#e2e8f0" stroke-width="3">
+      <circle cx="-30" cy="-8" r="16"/><circle cx="6" cy="-14" r="18"/>
+      <circle cx="38" cy="-6" r="15"/><circle cx="-4" cy="2" r="17"/>
+    </g>
+  </g>
+  <!-- 筷子 -->
+  <g transform="translate(330 296) rotate(-24)">
+    <rect x="-160" y="-52" width="260" height="9" rx="4" fill="#92400e"/>
+    <rect x="-160" y="-36" width="260" height="9" rx="4" fill="#b45309"/>
+  </g>
+  <!-- 小碟与青菜 -->
+  <g transform="translate(570 330)">
+    <ellipse cx="0" cy="24" rx="86" ry="20" fill="#e2e8f0"/>
+    <ellipse cx="0" cy="18" rx="86" ry="20" fill="#f8fafc" stroke="#cbd5e1" stroke-width="4"/>
+    <g fill="#16a34a">
+      <path d="M-40 12 q14 -30 30 -6 q-14 18 -30 6 Z"/>
+      <path d="M-6 8 q12 -28 28 -4 q-12 18 -28 4 Z"/>
+      <path d="M-24 20 q16 -24 32 -2 q-14 16 -32 2 Z"/>
+    </g>
+  </g>
+  <!-- 汤勺 -->
+  <g transform="translate(185 340) rotate(18)">
+    <rect x="-6" y="-70" width="12" height="86" rx="6" fill="#cbd5e1"/>
+    <ellipse cx="0" cy="34" rx="26" ry="20" fill="#e2e8f0"/>
+  </g>
+</svg>
