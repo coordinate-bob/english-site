@@ -86,7 +86,7 @@ ECDICT 每行一个词，含 `word / phonetic / translation / pos / tag` 等列�
 - **tips（得分要点）**：**5** 条，对应栏目顶部卡片（短句化、专有名词、不逐字直译、降级表达、检查清单）
 - **passages（练习段落）**：**50** 篇，覆盖四六级翻译五大题材——传统文化、历史景点、社会习俗、中国发展、地理特产，**每个题材 10 篇（四级 5 篇 + 六级 5 篇）**。新增 40 篇为 2026-10-25 批量扩写（zh 120–160 字、en 150–190 词），首批 10 篇长度略宽（zh ≤180 字、en ≥95 词）。字段 `{ "id", "topic", "level", "title", "image", "zh", "en", "terms", "tips" }`；`level` 为 `四级`/`六级`；`zh` 为待译中文段落，`en` 为参考译文，`terms` 为本篇专有名词/重点词（`{ "zh", "en", "note" }`），`tips` 为针对本篇的翻译手法提示
 
-配图在 `../images/` 目录，为**本站原创手绘 SVG 插画**（`spring-festival / tea / great-wall / forbidden-city / chopsticks / wedding / high-speed-rail / mobile-payment / guilin / porcelain` 共 10 张），每个题材 2 张，同题材内的 passage 通过 `image` 字段循环复用（扩写的 40 篇未新增配图，复用题材现有图片）。
+配图在 `../images/photos/` 目录，为 **50 张真实照片**（每篇一张，按主题匹配，2026-10-26 从 Pexels 下载，Pexels License 允许免费使用与修改、无需署名），文件名与 passage 的 `id` 一一对应（`<id>.jpg`）。少数无直接对应照片的主题使用了最接近的回退照片（如：皮影戏→戏曲表演、清明→踏青、白酒→baijiu 静物）。`../images/` 下的 10 张原创 SVG 插画保留，不再被引用，作为离线兜底可删可留。
 
 站点对段落的「已掌握」标记存于浏览器 localStorage（`eng-translation-done`），与本文件无关。
 
