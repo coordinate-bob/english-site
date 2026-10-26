@@ -552,9 +552,26 @@
 
   function renderEssays() {
     var listEl = document.getElementById('essay-list');
+    var filterSel = document.getElementById('essay-filter');
+    var countEl = document.getElementById('essay-count');
     if (!listEl || writingFailed || !WRITING.essays.length) return;
+    if (filterSel && !filterSel.dataset.built) {
+      var seen = {};
+      WRITING.essays.forEach(function (e) {
+        if (seen[e.type]) return;
+        seen[e.type] = true;
+        var opt = document.createElement('option');
+        opt.value = e.type;
+        opt.textContent = e.type;
+        filterSel.appendChild(opt);
+      });
+      filterSel.dataset.built = '1';
+    }
+    var filter = filterSel ? filterSel.value : 'all';
+    var visible = WRITING.essays.filter(function (e) { return filter === 'all' || e.type === filter; });
+    if (countEl) countEl.textContent = '共 ' + visible.length + ' 篇';
     listEl.innerHTML = '';
-    WRITING.essays.forEach(function (e, i) {
+    visible.forEach(function (e, i) {
       var open = essayOpen[e.id] !== undefined ? essayOpen[e.id] : i === 0;
       var words = e.body.split(/\s+/).length;
       var paras = e.body.split(/\n\n/).map(function (p) { return '<p>' + escapeHtml(p) + '</p>'; }).join('');
@@ -623,7 +640,7 @@
   var TRANSLATION = { tips: [], passages: [] };
   var translationFailed = false;
   var translationDone = read('translation-done', {}); // 段落 id → true，已掌握标记
-  var translationOpen = {}; // 段落展开状态；未记录默认第一篇展开
+  var translationOpen = {}; // 段落展开状态；未记录默认每题材第一篇展开
 
   function translationTermsHtml(terms) {
     return terms.map(function (t) {
@@ -642,6 +659,7 @@
     var listEl = document.getElementById('translation-list');
     var progEl = document.getElementById('translation-progress');
     var filterSel = document.getElementById('translation-filter');
+    var levelSel = document.getElementById('translation-level-filter');
     renderTranslationTips();
     if (!listEl) return;
     if (translationFailed) {
@@ -663,12 +681,14 @@
       filterSel.dataset.built = '1';
     }
     var filter = filterSel.value;
+    var level = levelSel ? levelSel.value : 'all';
     var total = TRANSLATION.passages.length;
     var doneCount = TRANSLATION.passages.filter(function (p) { return translationDone[p.id]; }).length;
     progEl.textContent = '已掌握 ' + doneCount + '/' + total;
     var topicOrder = [], byTopic = {};
     TRANSLATION.passages.forEach(function (p) {
       if (filter !== 'all' && filter !== p.topic) return;
+      if (level !== 'all' && level !== p.level) return;
       if (!byTopic[p.topic]) { byTopic[p.topic] = []; topicOrder.push(p.topic); }
       byTopic[p.topic].push(p);
     });
@@ -682,6 +702,7 @@
         group.className = 'day-group';
         group.innerHTML = '<button type="button" class="day-header" data-trans="' + escapeHtml(p.id) + '">' +
           '<span class="day-caret">' + (open ? '▾' : '▸') + '</span>' +
+          '<span class="lib-badge ' + (p.level === '四级' ? 'lib-cet4' : 'lib-cet6') + '">' + escapeHtml(p.level) + '</span>' +
           '<span class="day-title">' + escapeHtml(p.title) + '</span>' +
           (done ? '<span class="done-badge">✓ 已掌握</span>' : '') +
           '</button>' +
@@ -1026,6 +1047,8 @@
 
     document.getElementById('tab-translation').addEventListener('click', onTranslationClick);
     document.getElementById('translation-filter').addEventListener('change', renderTranslation);
+    document.getElementById('translation-level-filter').addEventListener('change', renderTranslation);
+    document.getElementById('essay-filter').addEventListener('change', renderEssays);
   }
 
   function init() {

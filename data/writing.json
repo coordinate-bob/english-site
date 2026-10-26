@@ -251,38 +251,8 @@
      "why": "三个并列动词 + 现在分词收尾，一句装下多个信息点"
     },
     {
-     "en": "We should treat AI as an assistant rather than a substitute for our own brains.",
+     "en": "Therefore, we should treat AI as an assistant rather than a substitute for our own brains.",
      "why": "assistant / substitute 对比精准，可直接迁移到手机、网络等话题"
-    }
-   ]
-  },
-  {
-   "id": "essay-night-running",
-   "level": "四级",
-   "type": "现象解释类",
-   "title": "校园夜跑为何流行？",
-   "prompt": "Directions: For this part, you are allowed 30 minutes to write a short essay on why night running is becoming popular among college students. You are supposed to analyze the reasons and give your comment. You will write at least 120 words but no more than 180 words.",
-   "gist": "现象：大学生流行夜跑。原因：门槛低、减压。评论：健康趋势，但要注意安全。",
-   "body": "These days, if you walk around a university campus after dinner, you are very likely to see groups of students running on the playground. This trend, known as \"night running\", is gaining popularity for several reasons.\n\nTo begin with, running is one of the easiest ways to keep fit. Unlike ball games, it requires no equipment and no teammates, so anyone can start at once. In addition, college students are under heavy pressure from study, and running offers a good way to relax. After an hour of exercise, they feel refreshed and can focus better on their work.\n\nAs far as I am concerned, the popularity of night running is a healthy trend. However, safety should never be ignored: students should avoid running alone in dark or remote areas.\n\nIn a word, night running benefits both the body and the mind, and it deserves to be encouraged on campus.",
-   "structure": [
-    "开头（第 1 段）：白描现象场景，比直接下定义更生动",
-    "原因一（第 2 段前）：门槛低——与球类对比论证",
-    "原因二（第 2 段后）：减压——运动后的状态作支撑",
-    "评论（第 3 段）：先定性 healthy trend，再补一个 safety 注意点",
-    "结尾（第 4 段）：双受益 + 值得鼓励，一句话收束"
-   ],
-   "highlights": [
-    {
-     "en": "This trend, known as \"night running\", is gaining popularity for several reasons.",
-     "why": "known as 点出概念，for several reasons 明确下文结构"
-    },
-    {
-     "en": "Unlike ball games, it requires no equipment and no teammates, so anyone can start at once.",
-     "why": "Unlike 对比 + so 因果，一句把「门槛低」讲透"
-    },
-    {
-     "en": "In a word, night running benefits both the body and the mind, and it deserves to be encouraged on campus.",
-     "why": "body and mind 对仗，deserve to be done 收尾表态"
     }
    ]
   },
@@ -317,6 +287,530 @@
    ]
   },
   {
+   "id": "essay-opinion-01",
+   "level": "四级",
+   "type": "观点类",
+   "title": "校园内是否应该禁止学生使用智能手机",
+   "prompt": "For this part, you are allowed 30 minutes to write an essay on whether smartphones should be banned on campus. You should write at least 120 words but no more than 180 words.",
+   "gist": "文章认为不应全面禁止，而应合理引导。智能手机既是学习工具也是干扰源，关键在于培养学生自律和学校明确使用规范。",
+   "body": "In recent years, many universities have debated whether smartphones should be banned on campus. Some people believe that phones distract students from their studies, while others argue that phones are useful tools. In my opinion, a complete ban is unnecessary; instead, students should learn to use smartphones wisely.\n\nFirst and foremost, smartphones can actually support learning. With a phone, students can look up new words, watch educational videos, and communicate with teachers at any time. Banning phones would take away these convenient tools. What is more, college students are adults who need to develop self-discipline. A forced ban may stop phone use on campus, but it does not teach students how to control themselves in the future.\n\nAdmittedly, phones can be addictive, and some students waste hours on games and short videos. Therefore, universities should set clear rules, such as asking students to silence their phones during class.\n\nIn short, smartphones should be managed, not banned. Self-discipline, rather than strict rules, is the real solution.",
+   "structure": [
+    "第一段：引出争议话题，并明确表态——不应全面禁止，而应引导合理使用",
+    "第二段：第一个论点，智能手机能辅助学习；第二个论点，大学生需要培养自律而非被强制",
+    "第三段：让步承认手机有成瘾问题，并给出具体建议（课堂静音等校规）",
+    "第四段：总结全文，强调管理和自律是解决办法"
+   ],
+   "highlights": [
+    {
+     "en": "In my opinion, a complete ban is unnecessary; instead, students should learn to use smartphones wisely.",
+     "why": "亮观点的经典句式：In my opinion, ... is unnecessary; instead, ...，可用于任何“反对一刀切做法”的观点类作文"
+    },
+    {
+     "en": "A forced ban may stop phone use on campus, but it does not teach students how to control themselves in the future.",
+     "why": "转折对比句型 may..., but it does not...，论证“治标不治本”时非常通用"
+    },
+    {
+     "en": "In short, smartphones should be managed, not banned.",
+     "why": "In short + 对比结构 should be X, not Y，是结尾点题、强化立场的万能句"
+    }
+   ]
+  },
+  {
+   "id": "essay-opinion-02",
+   "level": "四级",
+   "type": "观点类",
+   "title": "大学生是否应该做兼职",
+   "prompt": "For this part, you are allowed 30 minutes to write an essay on whether college students should take part-time jobs. You should write at least 120 words but no more than 180 words.",
+   "gist": "文章支持大学生适度做兼职。兼职能积累工作经验、培养责任感，还能减轻经济负担；但要把握好度，不能影响学业。",
+   "body": "Nowadays, many college students take part-time jobs in their spare time. Some parents worry that working will affect their children's studies. As I see it, college students should be encouraged to do part-time work, as long as they manage their time properly.\n\nFirst and foremost, part-time jobs provide valuable work experience that cannot be learned from textbooks. By working as a tutor or a shop assistant, students learn how to communicate with different people and how to solve real problems. What is more, earning their own money helps students understand the value of hard work and become more independent. Many students also use their income to pay for daily expenses, which reduces the burden on their families.\n\nHowever, it is true that some students spend too much time working and fall behind in their studies. So students should choose jobs with flexible hours and limit their working time.\n\nTo conclude, part-time work benefits college students greatly, provided that they keep a balance between work and study.",
+   "structure": [
+    "第一段：引出话题并表明立场——支持兼职，前提是合理安排时间",
+    "第二段：论点一，兼职提供课本学不到的工作经验；论点二，赚钱培养独立并减轻家庭负担",
+    "第三段：让步——兼职过多会影响学业，提出具体建议（选灵活工时、限制时长）",
+    "第四段：总结，强调在学业与兼职间保持平衡"
+   ],
+   "highlights": [
+    {
+     "en": "As I see it, college students should be encouraged to do part-time work, as long as they manage their time properly.",
+     "why": "As I see it 引出观点 + as long as 补充条件，表态留有余地，适合需要“适度支持”的话题"
+    },
+    {
+     "en": "By working as a tutor or a shop assistant, students learn how to communicate with different people and how to solve real problems.",
+     "why": "By doing..., sb. learn how to... and how to... 句型，用具体例子支撑论点，可直接迁移"
+    },
+    {
+     "en": "To conclude, part-time work benefits college students greatly, provided that they keep a balance between work and study.",
+     "why": "To conclude + provided that 高级连接词 + keep a balance between... and...，结尾收束句型丰富"
+    }
+   ]
+  },
+  {
+   "id": "essay-opinion-03",
+   "level": "四级",
+   "type": "观点类",
+   "title": "在线课程能否取代传统课堂",
+   "prompt": "For this part, you are allowed 30 minutes to write an essay on whether online courses can replace traditional classrooms. You should write at least 120 words but no more than 180 words.",
+   "gist": "文章认为在线课程无法完全取代传统课堂。在线课程灵活便捷，但传统课堂的互动、监督和学习氛围不可替代，两者应结合使用。",
+   "body": "With the rapid development of the Internet, online courses have become very popular among college students. Some people even claim that they will soon replace traditional classrooms. However, I believe that online learning cannot completely take the place of face-to-face teaching.\n\nFirst and foremost, traditional classrooms offer valuable interaction between teachers and students. In class, students can ask questions immediately and discuss ideas with their classmates, which helps them understand knowledge more deeply. Online courses, by contrast, often feel one-way and lonely. What is more, a real classroom provides discipline and supervision. When studying at home, many students become lazy and cannot concentrate, so their learning efficiency drops quickly.\n\nOf course, online courses do have advantages. They are flexible and allow students to learn anytime and anywhere.\n\nIn conclusion, online courses are a useful supplement rather than a replacement. The best choice is to combine both ways of learning.",
+   "structure": [
+    "第一段：由网络发展引出问题，明确观点——在线课程不能完全取代传统课堂",
+    "第二段：论点一，传统课堂有师生互动和讨论；论点二，真实课堂有纪律和监督，在家学习效率低",
+    "第三段：让步——承认在线课程灵活便捷的优点",
+    "第四段：总结定位为“补充而非替代”，建议两者结合"
+   ],
+   "highlights": [
+    {
+     "en": "However, I believe that online learning cannot completely take the place of face-to-face teaching.",
+     "why": "I believe that... cannot completely take the place of...，表达“不能完全替代”观点的标准句式"
+    },
+    {
+     "en": "Online courses, by contrast, often feel one-way and lonely.",
+     "why": "..., by contrast, ... 插入语形成鲜明对比，论证正反两面时特别好用"
+    },
+    {
+     "en": "In conclusion, online courses are a useful supplement rather than a replacement.",
+     "why": "a useful supplement rather than a replacement 是 rather than 对比结构的精炼表达，可迁移到很多科技类话题"
+    }
+   ]
+  },
+  {
+   "id": "essay-opinion-04",
+   "level": "四级",
+   "type": "观点类",
+   "title": "大学生坚持早起锻炼是否值得",
+   "prompt": "For this part, you are allowed 30 minutes to write an essay on whether it is worthwhile for college students to keep the habit of getting up early to exercise. You should write at least 120 words but no more than 180 words.",
+   "gist": "文章认为早起锻炼值得坚持。晨练有益身体健康、提升学习效率，还能培养毅力；对作息不规律的大学生尤其重要。",
+   "body": "On many college campuses, some students get up early every morning to run or play sports, while others prefer to stay in bed. Is it really worthwhile to form such a habit? My answer is definitely yes.\n\nFirst and foremost, morning exercise greatly improves our physical health. Running, jogging or playing ball in the morning strengthens the body and helps us fight off illness. For students who sit for long hours every day, this is especially important. What is more, exercising early in the morning refreshes both the body and the mind. After a morning workout, students usually feel more energetic and can focus better on their lessons throughout the day.\n\nSome students argue that getting up early makes them sleepy in class. In fact, this problem usually disappears once their bodies get used to the new schedule.\n\nAll in all, developing the habit of early-morning exercise is surely worthwhile, as it benefits both our health and our studies.",
+   "structure": [
+    "第一段：用设问引出话题并直接给出肯定回答",
+    "第二段：论点一，晨练增强体质、抵抗疾病；论点二，晨练让人精力充沛、提高白天学习专注力",
+    "第三段：让步并反驳——早起上课犯困只是暂时现象，适应后即消失",
+    "第四段：总结，重申早起锻炼对学习和健康都值得"
+   ],
+   "highlights": [
+    {
+     "en": "Is it really worthwhile to form such a habit? My answer is definitely yes.",
+     "why": "设问句 + 直接作答，开头亮观点的活泼写法，比平铺直叙更有吸引力"
+    },
+    {
+     "en": "After a morning workout, students usually feel more energetic and can focus better on their lessons throughout the day.",
+     "why": "feel more energetic and focus better 结构简洁地道，写健康生活类话题可直接套用"
+    },
+    {
+     "en": "All in all, developing the habit of early-morning exercise is surely worthwhile, as it benefits both our health and our studies.",
+     "why": "All in all + as 引导原因状语 + both... and...，结尾总结兼重申价值的完整句型"
+    }
+   ]
+  },
+  {
+   "id": "essay-opinion-05",
+   "level": "六级",
+   "type": "观点类",
+   "title": "人工智能是否会取代人类工作",
+   "prompt": "For this part, you are allowed 30 minutes to write an essay on whether artificial intelligence will replace human workers. You should write at least 150 words but no more than 200 words.",
+   "gist": "文章认为人工智能不会全面取代人类工作。AI能承担重复性任务并创造新岗位，但创造力、情感沟通和道德判断仍属人类；人类应主动提升技能与AI协作。",
+   "body": "Artificial intelligence has developed at a surprising speed in recent years, and machines can now write articles, drive cars and even diagnose diseases. This has led many people to worry that AI will one day take away most human jobs. In my view, however, such fear is largely unnecessary.\n\nFirst and foremost, although AI is good at handling repetitive tasks, it cannot replace human creativity, emotional communication and moral judgment. A robot may perform an operation, but it cannot comfort a frightened patient the way a doctor does. What is more, history shows that technology often creates more jobs than it destroys. The rise of the Internet, for example, gave birth to entirely new professions that no one could have imagined decades ago.\n\nAdmittedly, some traditional jobs will disappear, and workers in those fields may suffer for a period of time. Therefore, governments and companies should provide training programs to help people learn new skills.\n\nIn conclusion, rather than replacing humans, AI is more likely to become a powerful tool in our hands. The key is to keep learning and adapt to the changing world.",
+   "structure": [
+    "第一段：以AI发展现状引入，提出普遍担忧，随即亮明观点——担忧大可不必",
+    "第二段：论点一，AI无法替代创造力、情感沟通和道德判断，用手术与安慰病人的例子说明；论点二，历史证明技术创造的岗位多于消灭的，以互联网为例",
+    "第三段：让步承认部分传统岗位会消失，提出政府和企业提供再培训的建议",
+    "第四段：总结升华——AI是工具而非替代者，关键是持续学习和适应"
+   ],
+   "highlights": [
+    {
+     "en": "In my view, however, such fear is largely unnecessary.",
+     "why": "In my view, however, ... is largely unnecessary 简洁有力地否定一个流行观点，立场鲜明"
+    },
+    {
+     "en": "A robot may perform an operation, but it cannot comfort a frightened patient the way a doctor does.",
+     "why": "may..., but it cannot... the way... 用具体场景做对比论证，避免抽象说教，极具说服力"
+    },
+    {
+     "en": "The key is to keep learning and adapt to the changing world.",
+     "why": "The key is to... 收束全文并给出行动方向，结尾金句句型，可广泛用于科技、教育类话题"
+    }
+   ]
+  },
+  {
+   "id": "essay-opinion-06",
+   "level": "六级",
+   "type": "观点类",
+   "title": "远程办公的利与弊",
+   "prompt": "For this part, you are allowed 30 minutes to write an essay on the advantages and disadvantages of working from home. You should write at least 150 words but no more than 200 words.",
+   "gist": "文章认为远程办公利大于弊。它节省通勤时间、提高工作效率，也带来孤立感和工作边界模糊的问题；关键在于自律和保持沟通。",
+   "body": "Since the pandemic, working from home has become common in many countries. Some employees enjoy the freedom it brings, while others struggle with its problems. As far as I am concerned, the advantages of remote work outweigh its disadvantages.\n\nFirst and foremost, working from home saves a great deal of time that would otherwise be wasted on crowded buses or traffic jams. Employees can use these hours for work or rest, which often leads to higher productivity. What is more, remote work gives people more flexibility. Parents, for example, can better take care of their children while still completing their tasks.\n\nThat said, working from home does have drawbacks. Some people feel isolated without daily face-to-face communication with colleagues, and others find it hard to separate work from personal life. To deal with these problems, workers should set clear schedules and stay in regular contact with their teams.\n\nIn short, remote working is a double-edged sword, but with good time management and self-discipline, we can certainly make the most of it.",
+   "structure": [
+    "第一段：背景引入（疫情后远程办公普及），明确立场——利大于弊",
+    "第二段：论点一，省去通勤时间、提高效率；论点二，灵活性强，以有孩子的员工为例",
+    "第三段：让步说明两大弊端——孤立感、工作与生活难分离，并给出对应解决办法",
+    "第四段：总结，用双刃剑比喻收束，强调自律能扬长避短"
+   ],
+   "highlights": [
+    {
+     "en": "As far as I am concerned, the advantages of remote work outweigh its disadvantages.",
+     "why": "As far as I am concerned + outweigh 是“利大于弊”类题目的必备表态句"
+    },
+    {
+     "en": "working from home saves a great deal of time that would otherwise be wasted on crowded buses or traffic jams.",
+     "why": "save time that would otherwise be wasted on... 结构清晰地说明时间如何被节省，议论文论证很常用"
+    },
+    {
+     "en": "In short, remote working is a double-edged sword, but with good time management and self-discipline, we can certainly make the most of it.",
+     "why": "double-edged sword + make the most of it 是辩证类话题结尾的模板级表达"
+    }
+   ]
+  },
+  {
+   "id": "essay-opinion-07",
+   "level": "六级",
+   "type": "观点类",
+   "title": "极简主义生活方式的兴起",
+   "prompt": "For this part, you are allowed 30 minutes to write an essay on the rise of minimalism as a lifestyle. You should write at least 150 words but no more than 200 words.",
+   "gist": "文章分析极简主义兴起的原因并予以肯定。物质过剩和压力让人渴望简化生活；极简主义让人省钱、减压、专注真正重要的事，但不必走向极端。",
+   "body": "In recent years, an increasing number of young people have begun to embrace minimalism: they own fewer things, buy only what they truly need, and try to live a simpler life. This trend has become especially popular in big cities, and I believe it reflects a healthy change in people's values.\n\nFirst and foremost, modern society encourages us to consume constantly, and as a result, many people find themselves surrounded by useless items and heavy debts. Minimalism offers a way out. By reducing possessions, people spend less money and feel less stressed about keeping up with others. What is more, when we stop wasting time on shopping and organizing stuff, we can devote more energy to relationships, hobbies and personal growth, which truly make life meaningful.\n\nOf course, minimalism should not become an extreme rule that denies all enjoyment. Owning a beautiful and useful object is not a sin.\n\nIn conclusion, the rise of minimalism shows that more people are choosing quality over quantity. Living with less can indeed lead to a richer life.",
+   "structure": [
+    "第一段：解释极简主义的含义和流行现状，表明态度——这是价值观的健康转变",
+    "第二段：论点一，极简主义是对消费主义的回应，能省钱减压；论点二，省下购物时间可投入关系、爱好和自我成长",
+    "第三段：让步——极简不应变成否认一切享受的极端规则",
+    "第四段：总结，用 quality over quantity 和 richer life 的反差呼应主题"
+   ],
+   "highlights": [
+    {
+     "en": "First and foremost, modern society encourages us to consume constantly, and as a result, many people find themselves surrounded by useless items and heavy debts.",
+     "why": "and as a result 引出因果链 + find oneself surrounded by...，分析社会现象成因时非常实用"
+    },
+    {
+     "en": "when we stop wasting time on shopping and organizing stuff, we can devote more energy to relationships, hobbies and personal growth, which truly make life meaningful.",
+     "why": "stop wasting time on... so we can devote more energy to...，which 定语从句收尾，论证“做减法的好处”结构完整"
+    },
+    {
+     "en": "Living with less can indeed lead to a richer life.",
+     "why": "less 与 richer 的对比让结尾简洁有力，是写作中制造反差效果的经典手法"
+    }
+   ]
+  },
+  {
+   "id": "essay-opinion-08",
+   "level": "六级",
+   "type": "观点类",
+   "title": "社交媒体让人更亲密还是更孤独",
+   "prompt": "For this part, you are allowed 30 minutes to write an essay on whether social media brings people closer together or makes them lonelier. You should write at least 150 words but no more than 200 words.",
+   "gist": "文章认为社交媒体总体拉近了距离，但使用不当会加剧孤独。它让异地亲友保持联系、拓展社交圈；但沉迷线上互动会挤压面对面交流，关键在健康使用。",
+   "body": "Social media has changed the way we communicate. With a smartphone, we can talk to friends thousands of kilometers away within seconds. Some people argue, however, that these platforms actually make people lonelier. In my opinion, social media mainly brings people closer, although problems do exist when it is used improperly.\n\nFirst and foremost, social media keeps relationships alive across distance. Students studying abroad, for instance, can share their daily lives with their parents and never feel truly far from home. What is more, these platforms help us build new connections. People with shared interests can find each other easily, which was almost impossible in the past.\n\nNevertheless, spending too much time on social media can be harmful. If we stare at screens instead of meeting friends face to face, our real relationships may become weak. Therefore, we should treat social media as a bridge rather than a wall.\n\nIn conclusion, social media itself is neither good nor bad; its effect depends on how we use it. Used wisely, it makes our world smaller and our hearts closer.",
+   "structure": [
+    "第一段：引入社交媒体改变交流方式及相反观点，表明立场——总体拉近距离，但不当使用会有问题",
+    "第二段：论点一，社交媒体维系异地亲情，以留学生与父母为例；论点二，帮助有共同兴趣的人建立新联系",
+    "第三段：让步——过度使用会削弱现实关系，提出把社交媒体当桥梁而非墙的建议",
+    "第四段：总结，强调效果取决于使用方式，用更小世界、更近心灵收尾"
+   ],
+   "highlights": [
+    {
+     "en": "In my opinion, social media mainly brings people closer, although problems do exist when it is used improperly.",
+     "why": "although 让步状语从句修饰立场句，先肯定再补充限定，表态严谨、层次丰富"
+    },
+    {
+     "en": "If we stare at screens instead of meeting friends face to face, our real relationships may become weak.",
+     "why": "If... instead of..., ... may... 条件假设句论证风险，写弊端段时非常好用"
+    },
+    {
+     "en": "Used wisely, it makes our world smaller and our hearts closer.",
+     "why": "过去分词短语开头 + smaller/closer 对比呼应题目两个关键词，结尾句式漂亮且可迁移"
+    }
+   ]
+  },
+  {
+   "id": "essay-night-running",
+   "level": "四级",
+   "type": "现象解释类",
+   "title": "校园夜跑为何流行？",
+   "prompt": "Directions: For this part, you are allowed 30 minutes to write a short essay on why night running is becoming popular among college students. You are supposed to analyze the reasons and give your comment. You will write at least 120 words but no more than 180 words.",
+   "gist": "现象：大学生流行夜跑。原因：门槛低、减压。评论：健康趋势，但要注意安全。",
+   "body": "These days, if you walk around a university campus after dinner, you are very likely to see groups of students running on the playground. This trend, known as \"night running\", is gaining popularity for several reasons.\n\nTo begin with, running is one of the easiest ways to keep fit. Unlike ball games, it requires no equipment and no teammates, so anyone can start at once. In addition, college students are under heavy pressure from study, and running offers a good way to relax. After an hour of exercise, they feel refreshed and can focus better on their work.\n\nAs far as I am concerned, the popularity of night running is a healthy trend. However, safety should never be ignored: students should avoid running alone in dark or remote areas.\n\nIn a word, night running benefits both the body and the mind, and it deserves to be encouraged on campus.",
+   "structure": [
+    "开头（第 1 段）：白描现象场景，比直接下定义更生动",
+    "原因一（第 2 段前）：门槛低——与球类对比论证",
+    "原因二（第 2 段后）：减压——运动后的状态作支撑",
+    "评论（第 3 段）：先定性 healthy trend，再补一个 safety 注意点",
+    "结尾（第 4 段）：双受益 + 值得鼓励，一句话收束"
+   ],
+   "highlights": [
+    {
+     "en": "This trend, known as \"night running\", is gaining popularity for several reasons.",
+     "why": "known as 点出概念，for several reasons 明确下文结构"
+    },
+    {
+     "en": "Unlike ball games, it requires no equipment and no teammates, so anyone can start at once.",
+     "why": "Unlike 对比 + so 因果，一句把「门槛低」讲透"
+    },
+    {
+     "en": "In a word, night running benefits both the body and the mind, and it deserves to be encouraged on campus.",
+     "why": "body and mind 对仗，deserve to be done 收尾表态"
+    }
+   ]
+  },
+  {
+   "id": "essay-phenomenon-01",
+   "level": "四级",
+   "type": "现象解释类",
+   "title": "大学生考研热",
+   "prompt": "For this part, you are allowed 30 minutes to write an essay on why more and more college students choose to pursue postgraduate studies. You should analyze the reasons for this phenomenon and give your comment. You will write at least 120 words but no more than 180 words.",
+   "gist": "越来越多本科生加入考研大军，文章分析就业压力与深造需求两大原因，并评论考研虽好但需理性选择。",
+   "body": "In recent years, more college students in China have decided to take the national postgraduate entrance examination. Walk into any university library during the exam season, and you will find every seat taken by students buried in thick textbooks.\n\nSeveral factors account for this phenomenon. To begin with, fierce competition in the job market has pushed many students to delay employment and improve their qualifications, since a master's degree often opens doors to better positions. In addition, some students simply want to explore their major more deeply or switch to a field they love, which only further education makes possible.\n\nIn my view, pursuing a postgraduate degree is generally a positive choice, as it rewards those who are patient and hard-working. However, students should not follow the crowd blindly; they need to weigh their interests and career goals first.\n\nTo conclude, the boom reflects both social pressure and personal ambition, and only careful self-assessment can turn it into a wise move rather than a blind gamble.",
+   "structure": [
+    "第一段：描述现象场景——考研人数逐年增加，考试季图书馆一座难求。",
+    "第二段：分析原因——To begin with 就业竞争激烈、学历门槛抬高；In addition 想深造本专业或转专业。",
+    "第三段：评论——先定性为积极选择，再补充注意事项：不要盲目跟风，要结合兴趣、经济和职业规划。",
+    "第四段：总结——考研热折射社会压力与个人抱负，理性评估才能变盲目为明智。"
+   ],
+   "highlights": [
+    {
+     "en": "Walk into any university library during the exam season, and you will find every seat taken by students buried in thick textbooks.",
+     "why": "用场景化描写引出话题，画面感强，适合四级开头。"
+    },
+    {
+     "en": "To begin with, fierce competition in the job market has pushed many students to delay employment and improve their qualifications, since a master's degree often opens doors to better positions.",
+     "why": "To begin with 引出的因果句，因果连接词 since 用得地道。"
+    },
+    {
+     "en": "In my view, pursuing a postgraduate degree is generally a positive choice, as it rewards those who are patient and hard-working.",
+     "why": "先定性再展开的评论句，as 引导原因，结构规范。"
+    }
+   ]
+  },
+  {
+   "id": "essay-phenomenon-02",
+   "level": "四级",
+   "type": "现象解释类",
+   "title": "大学生养宠物现象流行",
+   "prompt": "For this part, you are allowed 30 minutes to write an essay on the growing popularity of keeping pets among college students. You should describe the phenomenon, analyze the reasons why students raise pets, and give your comment. You will write at least 120 words but no more than 180 words.",
+   "gist": "越来越多大学生在宿舍养猫养狗，文章从情感陪伴和社交分享两个角度分析原因，并评论养宠需责任心。",
+   "body": "These days, it is common to see college students walking dogs on campus or cuddling cats in their dormitories. Keeping pets, once rare in university life, has become a fashionable choice for many young people.\n\nWhy are students so eager to raise pets? To begin with, pets offer warm companionship. Away from home and under heavy academic pressure, students often feel lonely, and a lovely animal can ease their anxiety and bring them comfort. In addition, sharing pet photos and stories on social media has become a new way of socializing, so raising a cute pet also helps students make friends and show their personality.\n\nIn my opinion, keeping pets is a healthy trend, because caring for another life teaches students responsibility and patience. Nevertheless, students must remember that a pet is a living creature, not a toy, and they should consider time, cost and dormitory rules before bringing one home.\n\nIn short, pets bring joy to campus life, but true love for animals means commitment rather than impulse.",
+   "structure": [
+    "第一段：描述现象场景——校园里遛狗、宿舍里撸猫，养宠从少见变时髦。",
+    "第二段：分析原因——To begin with 宠物提供陪伴、缓解孤独与学业压力；In addition 社交媒体晒宠成为社交方式。",
+    "第三段：评论——先定性为健康趋势（培养责任感），再提醒要考虑时间、成本和宿舍规定。",
+    "第四段：总结——宠物带来快乐，但爱动物意味着责任而非一时冲动。"
+   ],
+   "highlights": [
+    {
+     "en": "Away from home and under heavy academic pressure, students often feel lonely, and a lovely animal can ease their anxiety and bring them comfort.",
+     "why": "状语前置句式 Away from home... 简洁有力，ease anxiety 搭配实用。"
+    },
+    {
+     "en": "In addition, sharing pet photos and stories on social media has become a new way of socializing, so raising a cute pet also helps students make friends and show their personality.",
+     "why": "动名词作主语 + so 表结果，紧扣当代大学生真实生活。"
+    },
+    {
+     "en": "Nevertheless, students must remember that a pet is a living creature, not a toy, and they should consider time, cost and dormitory rules before bringing one home.",
+     "why": "评论段的让步句，'a living creature, not a toy' 对比鲜明、易于背诵。"
+    }
+   ]
+  },
+  {
+   "id": "essay-phenomenon-03",
+   "level": "四级",
+   "type": "现象解释类",
+   "title": "用短视频学习的人越来越多",
+   "prompt": "For this part, you are allowed 30 minutes to write an essay on the phenomenon that more and more people are using short videos to learn knowledge and skills. You should analyze the reasons behind this trend and give your comment. You will write at least 120 words but no more than 180 words.",
+   "gist": "短视频不再只是娱乐工具，越来越多人用它学知识、学技能，文章分析其碎片化与低成本优势，并评论需警惕浅尝辄止。",
+   "body": "Short videos used to be seen as a tool for entertainment only, but now a surprising number of people open video apps to learn English words, cook dishes or practice math. Learning through short videos has quietly become part of daily life.\n\nThis trend is not hard to explain. To begin with, short videos break knowledge into small pieces, which fit perfectly into fragmented time, such as the minutes spent on a bus or while waiting for a meal. In addition, most learning videos are free and easy to follow, so anyone with a smartphone can enjoy lessons that once cost a lot of money.\n\nIn my view, it is a creative use of technology and worth encouraging. However, we should be aware that three-minute videos can only offer a taste of a subject, and real mastery still requires systematic reading and constant practice.\n\nIn conclusion, short videos are a good start for learning, but they should open the door to deeper study rather than stop us halfway.",
+   "structure": [
+    "第一段：描述现象场景——短视频从娱乐工具变为背单词、学做菜、练数学的学习渠道。",
+    "第二段：分析原因——To begin with 知识碎片化、适配等车排队等零碎时间；In addition 免费易得、降低学习门槛。",
+    "第三段：评论——先肯定这是对科技的创新利用，再指出短视频只能入门，精通仍需系统学习。",
+    "第四段：总结——短视频是学习的好起点，应是通往深度学习的大门而非半途而废的捷径。"
+   ],
+   "highlights": [
+    {
+     "en": "To begin with, short videos break knowledge into small pieces, which fit perfectly into fragmented time, such as the minutes spent on a bus or while waiting for a meal.",
+     "why": "which 引导非限定性定语从句，fragmented time 是高频考点词。"
+    },
+    {
+     "en": "In addition, most learning videos are free and easy to follow, so anyone with a smartphone can enjoy lessons that once cost a lot of money.",
+     "why": "so 连接因果关系，once 暗含今昔对比，句式丰富。"
+    },
+    {
+     "en": "However, we should be aware that three-minute videos can only offer a taste of a subject, and real mastery still requires systematic reading and constant practice.",
+     "why": "offer a taste of 形象地道，评论段的转折与提醒一目了然。"
+    }
+   ]
+  },
+  {
+   "id": "essay-phenomenon-04",
+   "level": "四级",
+   "type": "现象解释类",
+   "title": "城市夜市（地摊经济）回潮",
+   "prompt": "For this part, you are allowed 30 minutes to write an essay on the return of night markets and street stalls in Chinese cities. You should analyze the reasons for this revival and give your comment. You will write at least 120 words but no more than 180 words.",
+   "gist": "城市夜市和地摊重新热闹起来，文章分析其带来的就业与烟火气两大吸引力，并评论管理需规范与温度并存。",
+   "body": "After disappearing from many cities for years, night markets and street stalls are making a strong comeback. As evening falls, streets once again glow with colorful lights, and the smell of grilled food draws crowds of citizens.\n\nWhat lies behind this revival? To begin with, street stalls provide a low-cost way for ordinary people to start a business and create jobs, which is especially welcome in hard times. In addition, city dwellers are tired of shopping in identical malls; a lively night market offers them affordable goods, local snacks and the warm, human atmosphere they miss.\n\nAs far as I am concerned, the return of street stalls is generally a good thing, for it puts vitality back into urban life. Still, it must be managed properly: stalls should keep the streets clean and safe, and city authorities should balance order with tolerance rather than simply banning them again.\n\nAll in all, a well-managed night market can light up both the economy and people's evenings, and this old scene deserves its new life.",
+   "structure": [
+    "第一段：描述现象场景——消失多年的夜市地摊回归，华灯初上、美食飘香、人头攒动。",
+    "第二段：分析原因——To begin with 低门槛创业、带动就业；In addition 市民厌倦千篇一律的商场，渴望实惠与烟火气。",
+    "第三段：评论——先定性为好事（让城市恢复活力），再强调要规范管理：卫生、安全、疏堵结合。",
+    "第四段：总结——管理得当的夜市能点亮经济也点亮夜晚，老场景值得新生。"
+   ],
+   "highlights": [
+    {
+     "en": "What lies behind this revival?",
+     "why": "设问句承上启下，自然引出原因分析段。"
+    },
+    {
+     "en": "In addition, city dwellers are tired of shopping in identical malls; a lively night market offers them affordable goods, local snacks and the warm, human atmosphere they miss.",
+     "why": "identical malls 与 warm, human atmosphere 对比精妙，词汇运用地道。"
+    },
+    {
+     "en": "Still, it must be managed properly: stalls should keep the streets clean and safe, and city authorities should balance order with tolerance rather than simply banning them again.",
+     "why": "评论段的注意事项句，balance...with... 和 rather than 结构值得模仿。"
+    }
+   ]
+  },
+  {
+   "id": "essay-phenomenon-05",
+   "level": "六级",
+   "type": "现象解释类",
+   "title": "国货崛起（年轻人偏爱国产品牌）",
+   "prompt": "For this part, you are allowed 30 minutes to write an essay on the rising popularity of domestic brands among Chinese young consumers. You should analyze the reasons behind this trend and give your comment. You will write at least 150 words but no more than 200 words.",
+   "gist": "从手机到球鞋，年轻人越来越愿意为国产品牌买单，文章从产品质量提升与文化认同两方面剖析原因，并评论国货仍需在创新与诚信上持续努力。",
+   "body": "A quiet revolution is taking place in China's shopping malls and online platforms: young consumers, who once chased foreign labels, are now proudly buying domestic brands, from smartphones and sportswear to cosmetics and milk tea. National products have moved from the margin to the mainstream.\n\nSeveral forces drive this shift. To begin with, the quality of Chinese products has improved remarkably, and many domestic brands now rival or even surpass their foreign competitors in design and technology, while offering more attractive prices. In addition, growing national pride plays a role. Young people who came of age in a confident China regard buying domestic goods as a way to express cultural identity, and social media campaigns featuring traditional Chinese elements further fuel this enthusiasm.\n\nIn my view, the rise of domestic brands is a welcome sign of industrial maturity and cultural confidence. Nevertheless, popularity should not breed complacency: companies must keep investing in innovation and protect consumer rights, or the hard-won trust will fade quickly.\n\nTo conclude, domestic brands have won the young generation's wallet; only by honoring quality and creativity can they keep winning their hearts.",
+   "structure": [
+    "第一段：描述现象场景——曾经追逐外国名牌的年轻人转而自豪地购买国货，从手机、运动服到奶茶。",
+    "第二段：分析原因——To begin with 国货质量、设计、科技感提升且价格更优；In addition 文化认同感增强，国潮营销与社交媒体助推。",
+    "第三段：评论——先定性为产业成熟与文化自信的体现，再提醒企业不可自满，须持续创新、守护消费者权益。",
+    "第四段：总结——国货已赢得年轻人的钱包，唯有守住品质与创意才能赢得他们的心。"
+   ],
+   "highlights": [
+    {
+     "en": "National products have moved from the margin to the mainstream.",
+     "why": "from...to... 结构凝练，margin/mainstream 对比精准，适合作段落小结。"
+    },
+    {
+     "en": "Young people who came of age in a confident China regard buying domestic goods as a way to express cultural identity, and social media campaigns featuring traditional Chinese elements further fuel this enthusiasm.",
+     "why": "六级难度的定语从句 + regard...as... + featuring 分词后置，信息密度高。"
+    },
+    {
+     "en": "Nevertheless, popularity should not breed complacency: companies must keep investing in innovation and protect consumer rights, or the hard-won trust will fade quickly.",
+     "why": "breed complacency 与 hard-won trust 用词高级，or 引出警示，评论段典范句。"
+    }
+   ]
+  },
+  {
+   "id": "essay-phenomenon-06",
+   "level": "六级",
+   "type": "现象解释类",
+   "title": "银发网民增多（老年人热衷上网购物、刷视频）",
+   "prompt": "For this part, you are allowed 30 minutes to write an essay on the phenomenon that an increasing number of elderly people in China are becoming active internet users, shopping online and watching short videos. You should analyze the reasons for this trend and give your comment. You will write at least 150 words but no more than 200 words.",
+   "gist": "越来越多的老年人学会网购、刷视频、视频通话，文章从智能手机普及与情感需求两方面解释原因，并评论需帮助老人跨越数字鸿沟、防范网络诈骗。",
+   "body": "Not long ago, surfing the internet was regarded as a privilege of the young, but today the picture has changed dramatically. Gray-haired people can be seen everywhere scrolling through short videos, ordering groceries online, and chatting with their grandchildren via video calls. China's silver-haired generation is enthusiastically embracing the digital world.\n\nThis transformation has deep roots. To begin with, smartphones and apps have become far more user-friendly, with larger fonts, voice commands and simplified interfaces designed for elderly users, which greatly lowers the threshold of going online. In addition, the internet satisfies the emotional needs of older people: staying connected with family, making new friends in online communities, and filling the loneliness of retirement all become easier with a small screen.\n\nIn my judgment, this trend is essentially positive, as digital life keeps the elderly informed, entertained and socially engaged. That said, society must act responsibly: families should teach the elderly to guard against online fraud, and tech companies should design safer products for them, so that the digital divide does not become a trap.\n\nIn conclusion, when technology is guided by care, the internet can illuminate the golden years rather than leaving the old behind.",
+   "structure": [
+    "第一段：描述现象场景——白发老人刷视频、网购、视频通话，银发族热情拥抱数字世界。",
+    "第二段：分析原因——To begin with 手机与App适老化设计（大字体、语音、简洁界面）降低上网门槛；In addition 网络满足情感需求：联系家人、结交网友、排遣孤独。",
+    "第三段：评论——先定性为积极趋势，再补注意事项：家人教老人防网络诈骗，企业做更安全的产品，避免数字鸿沟变陷阱。",
+    "第四段：总结——技术带着关怀前行，互联网就能照亮晚年而非抛下老人。"
+   ],
+   "highlights": [
+    {
+     "en": "Not long ago, surfing the internet was regarded as a privilege of the young, but today the picture has changed dramatically.",
+     "why": "今昔对比开头，was regarded as 被动结构规范，dramatically 收尾有力。"
+    },
+    {
+     "en": "In addition, the internet satisfies the emotional needs of older people: staying connected with family, making new friends in online communities, and filling the loneliness of retirement all become easier with a small screen.",
+     "why": "冒号后三个并列动名词短语，排比工整，六级加分句式。"
+    },
+    {
+     "en": "In conclusion, when technology is guided by care, the internet can illuminate the golden years rather than leaving the old behind.",
+     "why": "结尾金句，illuminate the golden years 比喻贴切，rather than 对比收束。"
+    }
+   ]
+  },
+  {
+   "id": "essay-phenomenon-07",
+   "level": "六级",
+   "type": "现象解释类",
+   "title": "宠物经济快速发展",
+   "prompt": "For this part, you are allowed 30 minutes to write an essay on the rapid growth of the pet economy in China. You should analyze the reasons behind this booming industry and give your comment. You will write at least 150 words but no more than 200 words.",
+   "gist": "宠物食品、医疗、美容、寄养等产业蓬勃兴起，文章从情感消费升级与单身经济两方面剖析原因，并评论行业快速发展的同时要完善规范、善待动物。",
+   "body": "In China's cities, pets are no longer merely animals kept at home; they have become an industry worth hundreds of billions of yuan. Pet food stores, animal hospitals, grooming salons and boarding houses are springing up on every street, and the pet economy is expanding at a remarkable speed.\n\nThe reasons are twofold. To begin with, as living standards rise, people are willing to spend money on emotional fulfillment, and pets, regarded as family members, naturally receive generous investment in food, healthcare and even birthday cakes. In addition, demographic changes fuel the boom: a growing number of young people delay marriage and choose to live alone, so they adopt pets to keep them company, turning pet-related consumption into a daily necessity.\n\nFrom my perspective, the flourishing pet economy reflects a wealthier and more caring society, which is encouraging. However, rapid expansion should not come at the expense of standards; the industry urgently needs regulations on breeding, veterinary services and animal welfare, for a society's humanity is also measured by how it treats its animals.\n\nIn short, the pet economy is here to stay, and only with sound regulation and genuine respect for life can it grow healthily and sustainably.",
+   "structure": [
+    "第一段：描述现象场景——宠物食品、医院、美容、寄养遍布街角，宠物经济规模惊人、增速迅猛。",
+    "第二段：分析原因——To begin with 生活水平提高，人们愿为情感满足投入，把宠物当家人；In addition 晚婚独居的年轻人增多，养宠成为刚需。",
+    "第三段：评论——先定性为富而有爱的社会的体现，再强调行业需规范：繁育、兽医服务、动物福利亟待监管。",
+    "第四段：总结——宠物经济将持续存在，唯有规范管理与尊重生命才能健康可持续。"
+   ],
+   "highlights": [
+    {
+     "en": "In China's cities, pets are no longer merely animals kept at home; they have become an industry worth hundreds of billions of yuan.",
+     "why": "no longer... 开头定义现象，分号连接对比，开头句信息量大。"
+    },
+    {
+     "en": "In addition, demographic changes fuel the boom: a growing number of young people delay marriage and choose to live alone, so they adopt pets to keep them company, turning pet-related consumption into a daily necessity.",
+     "why": "demographic changes fuel the boom 搭配精当；turning... 分词短语作结果状语，六级亮点。"
+    },
+    {
+     "en": "However, rapid expansion should not come at the expense of standards; the industry urgently needs regulations on breeding, veterinary services and animal welfare, for a society's humanity is also measured by how it treats its animals.",
+     "why": "at the expense of standards 与 animal welfare 地道高级，for 引导的哲理句升华评论。"
+    }
+   ]
+  },
+  {
+   "id": "essay-phenomenon-08",
+   "level": "六级",
+   "type": "现象解释类",
+   "title": "年轻人返乡创业",
+   "prompt": "For this part, you are allowed 30 minutes to write an essay on the phenomenon that a growing number of young people are returning to their hometowns to start businesses. You should analyze the reasons for this choice and give your comment. You will write at least 150 words but no more than 200 words.",
+   "gist": "不少年轻人离开大城市，回到家乡开民宿、做电商、搞养殖，文章分析城市压力与乡村机遇两方面动因，并评论返乡创业需要政策扶持与个人脚踏实地并重。",
+   "body": "A new migration is reshaping China's countryside: instead of rushing to big cities, an increasing number of young people are packing their bags and heading home. They open guesthouses among green mountains, sell farm products through live-streaming, and run modern farms with drones and smartphones, breathing fresh energy into once-quiet villages.\n\nThis choice is driven by both push and pull factors. To begin with, soaring living costs and fierce competition in metropolises have discouraged many young workers, who find it hard to settle down or afford a decent life on limited salaries. In addition, the countryside itself has become full of opportunities: improved infrastructure, e-commerce platforms and government support for rural revitalization make it possible to build a career close to home, with lower costs and a better quality of life.\n\nIn my opinion, this reverse migration is a constructive trend that narrows the urban-rural gap. Even so, returning youth should prepare themselves carefully, and local governments should offer steady policies on funding and training, because passion alone cannot guarantee a thriving business.\n\nTo sum up, when dreams take root in hometown soil, both the young generation and the countryside stand to gain, provided ambition is matched with practical support.",
+   "structure": [
+    "第一段：描述现象场景——年轻人反向流动，回乡开民宿、直播卖农产品、用无人机经营现代农场，为乡村注入活力。",
+    "第二段：分析原因——推与拉：To begin with 大城市生活成本高、竞争激烈；In addition 乡村基础设施改善、电商与乡村振兴政策带来低成本、高质量的创业机会。",
+    "第三段：评论——先定性为缩小城乡差距的建设性趋势，再提醒青年要做好准备、政府要提供资金与培训等稳定政策，热情不等于成功。",
+    "第四段：总结——梦想扎根乡土，青年与乡村双赢，前提是抱负配上务实的支持。"
+   ],
+   "highlights": [
+    {
+     "en": "They open guesthouses among green mountains, sell farm products through live-streaming, and run modern farms with drones and smartphones, breathing fresh energy into once-quiet villages.",
+     "why": "三个并列谓语动词 + 分词收尾，画面与信息量兼备，六级高分句。"
+    },
+    {
+     "en": "To begin with, soaring living costs and fierce competition in metropolises have discouraged many young workers, who find it hard to settle down or afford a decent life on limited salaries.",
+     "why": "soaring/fierce/metropolises/decent 词汇精准，who 引导非限定性定语从句衔接自然。"
+    },
+    {
+     "en": "To sum up, when dreams take root in hometown soil, both the young generation and the countryside stand to gain, provided ambition is matched with practical support.",
+     "why": "结尾句 take root / stand to gain / provided that 条件结构层层递进，值得背诵。"
+    }
+   ]
+  },
+  {
+   "id": "essay-museum-boom",
+   "level": "六级",
+   "type": "现象解释类",
+   "title": "年轻人为何热衷逛博物馆？",
+   "prompt": "Directions: For this part, you are allowed 30 minutes to write an essay on why museums are becoming increasingly popular among young Chinese people. You are supposed to analyze the reasons behind this trend and give your comment. You will write at least 150 words but no more than 200 words.",
+   "gist": "现象：博物馆成为年轻人休闲新宠。原因：免费低价且内容提质、社交媒体的推动、文化认同需求。评论：积极趋势，博物馆需继续创新。",
+   "body": "In recent years, a remarkable change has taken place in how young Chinese people spend their weekends: instead of shopping malls and cinemas, more and more of them are choosing to visit museums, where they now account for a growing share of visitors. This trend has several driving forces.\n\nTo begin with, museums themselves have become more attractive. Free admission, creative exhibitions and cultural products such as museum-branded souvenirs have lowered the threshold and added fun to the visit. In addition, social media play an important role: photos and short videos of exhibitions spread quickly online, turning museums into popular check-in spots. More importantly, for a generation growing up amid rapid change, museums offer a sense of cultural identity and a peaceful escape from a stressful daily routine.\n\nAs far as I am concerned, the museum fever reflects young people's growing cultural confidence, and it deserves to be encouraged. Museums, for their part, should keep innovating to meet the rising expectations of young visitors.",
+   "structure": [
+    "开头（第 1 段）：对比式白描现象——周末去处从商场影院转向博物馆",
+    "原因一（第 2 段前）：博物馆自身提质——免费、文创、趣味展览",
+    "原因二（第 2 段中）：社交媒体推波助澜——拍照打卡传播",
+    "原因三（第 2 段后）：深层动因——文化认同与减压需求",
+    "评论（第 3 段）：定性为文化自信的体现，并对博物馆提出期望"
+   ],
+   "highlights": [
+    {
+     "en": "instead of shopping malls and cinemas, more and more of them are choosing to visit museums",
+     "why": "Instead of 对比开头，现象类作文快速入题"
+    },
+    {
+     "en": "photos and short videos of exhibitions spread quickly online, turning museums into popular check-in spots",
+     "why": "现在分词 turning... 作结果状语，一句写完因果"
+    },
+    {
+     "en": "the museum fever reflects young people's growing cultural confidence",
+     "why": "现象+定性一句话，评论段可直接套用"
+    }
+   ]
+  },
+  {
    "id": "essay-actions",
    "level": "六级",
    "type": "名言评论类",
@@ -343,6 +837,268 @@
     {
      "en": "It was her countless experiments, not her words, that saved millions of lives.",
      "why": "强调句 It was... that... 直接回应名言，屠呦呦例子可复用"
+    }
+   ]
+  },
+  {
+   "id": "essay-quote-01",
+   "level": "四级",
+   "type": "名言评论类",
+   "title": "Practice makes perfect",
+   "prompt": "Directions: For this part, you are allowed 30 minutes to write a short essay commenting on the saying \"Practice makes perfect.\" You should write at least 120 words but no more than 180 words.",
+   "gist": "熟能生巧：反复练习能让技能臻于纯熟，懈怠与畏难才是进步的敌人。",
+   "body": "\"Practice makes perfect\" tells us that repetition is the only path to true mastery of any skill. Simple as the saying is, it reveals a truth: talent alone can never replace hard, repeated work.\n\nThe logic is clear. When we repeat an action, our brains build stronger connections, and what once felt difficult becomes natural. Without practice, even the brightest learner remains a beginner, because knowledge stays shallow until it is applied.\n\nTake my experience of learning to swim. At first I sank almost every time. Instead of giving up, I went to the pool three times a week and repeated the basic movements. After two months, I could swim across the pool smoothly. Progress came from repeated, patient effort rather than sudden inspiration.\n\nIn conclusion, practice is the bridge between knowing and doing. With patience and repetition, we can turn weakness into strength.",
+   "structure": [
+    "第一段：引出名言并释义——反复练习是掌握技能的唯一途径，天赋不能代替重复的努力。",
+    "第二段：道理论证——重复使大脑建立更强联系，知识只有应用才能内化。",
+    "第三段：个人例子——学游泳从屡屡下沉到流畅横渡泳池，靠每周三次的重复练习。",
+    "第四段：总结升华——练习是连接知道与做到的桥梁，耐心坚持方能臻于完善。"
+   ],
+   "highlights": [
+    {
+     "en": "talent alone can never replace hard, repeated work.",
+     "why": "用 alone 和 never 强调天赋的局限，对比突出反复练习的不可替代。"
+    },
+    {
+     "en": "knowledge stays shallow until it is applied.",
+     "why": "让步+因果结构，论证不练习的后果。"
+    },
+    {
+     "en": "practice is the bridge between knowing and doing.",
+     "why": "比喻收尾，凝练有力，升华主题。"
+    }
+   ]
+  },
+  {
+   "id": "essay-quote-02",
+   "level": "四级",
+   "type": "名言评论类",
+   "title": "Where there is a will, there is a way",
+   "prompt": "Directions: For this part, you are allowed 30 minutes to write a short essay commenting on the saying \"Where there is a will, there is a way.\" You should write at least 120 words but no more than 180 words.",
+   "gist": "有志者事竟成：坚定的意志能帮人跨越困难，找到通向目标的道路。",
+   "body": "\"Where there is a will, there is a way\" encourages us never to give up in the face of difficulty. Simple as the saying is, it conveys a timeless message: a strong determination can find a path where others see only walls.\n\nWillpower changes the way we respond to obstacles. A person with a weak will stops at the first failure, while a determined person treats each setback as a lesson and keeps searching for solutions. In this sense, difficulties are not real barriers but tests of our commitment.\n\nA good example is Helen Keller, who lost her sight and hearing at nineteen months old. Instead of accepting a life of darkness, she resolved to learn. With the help of her teacher Anne Sullivan, she mastered language, graduated from college, and became a famous writer. Her life proves that a resolute will can overcome almost any limitation.\n\nIn short, the road may be long and rough, but a firm will lights the way forward. As long as we hold on to our goals, no obstacle can truly stop us.",
+   "structure": [
+    "第一段：引出名言并释义——坚定意志能在别人只看到墙的地方找到路。",
+    "第二段：道理论证——意志决定人对障碍的反应，困难是对承诺的考验而非真正的屏障。",
+    "第三段：名人事例——海伦·凯勒克服失明失聪成为作家，真实可信。",
+    "第四段：总结升华——意志照亮前路，坚持目标则无物可挡。"
+   ],
+   "highlights": [
+    {
+     "en": "a strong determination can find a path where others see only walls.",
+     "why": "对比鲜明，形象化表达意志的力量。"
+    },
+    {
+     "en": "difficulties are not real barriers but tests of our commitment.",
+     "why": "not...but... 结构重新定义困难，议论精练。"
+    },
+    {
+     "en": "Her life proves that a resolute will can overcome almost any limitation.",
+     "why": "用真实人物的一生印证论点，论据与结论衔接紧密。"
+    }
+   ]
+  },
+  {
+   "id": "essay-quote-03",
+   "level": "四级",
+   "type": "名言评论类",
+   "title": "Reading makes a full man",
+   "prompt": "Directions: For this part, you are allowed 30 minutes to write a short essay commenting on the saying \"Reading makes a full man.\" You should write at least 120 words but no more than 180 words.",
+   "gist": "读书使人充实：阅读拓宽视野、丰富思想，让人生更加丰满。",
+   "body": "\"Reading makes a full man\" is a famous remark by Francis Bacon, which tells us that reading is essential to a rich and complete life. Simple as the saying is, it reminds us that books are food for the mind just as meals are food for the body.\n\nThe truth lies in the unique power of reading. Through books, we can travel across time and space, learning from great thinkers without meeting them. Reading also trains our minds and sharpens our judgment. A person who never reads may know only his own small world, while an active reader carries a whole library within him.\n\nMy classmate Li Ming is a good example. He used to know little beyond his textbooks. Then he formed a habit of reading for half an hour every night. Two years later, he talked confidently about many subjects and won a school speech prize.\n\nIn a word, reading makes us fuller in knowledge, in thought, and in spirit. Let us open a book today and start enriching ourselves page by page.",
+   "structure": [
+    "第一段：引出名言并注明出处（培根），释义——书是心灵的食物。",
+    "第二段：道理论证——阅读能跨越时空学习、训练思维、形成判断。",
+    "第三段：学生例子——李明坚持每晚阅读，从寡言到演讲比赛夺冠。",
+    "第四段：总结升华——阅读使人在知识、思想、精神上充实，发出号召。"
+   ],
+   "highlights": [
+    {
+     "en": "books are food for the mind just as meals are food for the body.",
+     "why": "类比手法贴切生动，点明阅读滋养心灵的本质。"
+    },
+    {
+     "en": "A person who never reads may know only his own small world, while an active reader carries a whole library within him.",
+     "why": "while 对比两类人，画面感强，论据有力。"
+    },
+    {
+     "en": "Let us open a book today and start enriching ourselves page by page.",
+     "why": "祈使句收尾，从论证自然过渡到行动号召。"
+    }
+   ]
+  },
+  {
+   "id": "essay-quote-04",
+   "level": "四级",
+   "type": "名言评论类",
+   "title": "A journey of a thousand miles begins with a single step",
+   "prompt": "Directions: For this part, you are allowed 30 minutes to write a short essay commenting on the saying \"A journey of a thousand miles begins with a single step.\" You should write at least 120 words but no more than 180 words.",
+   "gist": "千里之行始于足下：伟大目标从第一步开始，行动胜于空想。",
+   "body": "The old saying \"A journey of a thousand miles begins with a single step\" teaches us that every great achievement starts from a small, concrete action. Simple as the saying is, it warns us against empty dreaming and calls us to begin where we stand.\n\nThe wisdom is easy to understand. Grand goals look frightening because they are far away, and many give up before starting. However, if we divide a big goal into small tasks, the distance becomes manageable. Each small step may seem tiny, but thousands of such steps add up to an amazing journey.\n\nA famous example comes from Yu Minhong, the founder of New Oriental. He did not build his education business in one day. He started with a small class of a few students and expanded step by step. Today it is one of the best-known education companies in China, all growing from that first small class.\n\nIn conclusion, do not wait for the perfect moment to chase your dreams. Take the first step now, and the thousand-mile journey will take care of itself.",
+   "structure": [
+    "第一段：引出名言并释义——伟大成就始于具体的小行动，反对空想。",
+    "第二段：道理论证——大目标分解成小任务，迈出第一步比完美计划更重要。",
+    "第三段：名人事例——俞敏洪从几个学生的小班课起步，逐步做成新东方。",
+    "第四段：总结升华——不必等待完美时机，现在就迈出第一步。"
+   ],
+   "highlights": [
+    {
+     "en": "it warns us against empty dreaming and calls us to begin where we stand.",
+     "why": "warn against / call to 并列，反对空谈、倡导行动。"
+    },
+    {
+     "en": "Each small step may seem tiny, but thousands of such steps add up to an amazing journey.",
+     "why": "转折句点出积累的力量，呼应名言的意象。"
+    },
+    {
+     "en": "Take the first step now, and the thousand-mile journey will take care of itself.",
+     "why": "祈使句+and 结构收束全文，回扣题目意象。"
+    }
+   ]
+  },
+  {
+   "id": "essay-failure-success",
+   "level": "四级",
+   "type": "名言评论类",
+   "title": "Failure is the mother of success",
+   "prompt": "Directions: For this part, you are allowed 30 minutes to write an essay commenting on the saying \"Failure is the mother of success.\" You should explain its meaning and give examples to support your view. You will write at least 120 words but no more than 180 words.",
+   "gist": "释义：失败孕育成功。论证：失败提供经验、磨炼意志；举爱迪生/学生考试例子。结论：不怕失败、善于总结才能成功。",
+   "body": "There is a famous saying that failure is the mother of success, which means success often grows out of failure. In other words, the road to success is rarely smooth, and it is how we deal with failure that makes a difference.\n\nFailure teaches us valuable lessons. When we fail, we can look back, find out what went wrong, and do better next time. A student who fails an exam and carefully corrects every mistake is very likely to make progress in the next one. Failure also builds our will. Take Thomas Edison as an example: he failed thousands of times before he invented the light bulb, but he never gave up. It was those failures that finally led him to success.\n\nTherefore, we should not be afraid of failure. Instead, we should learn from it and keep trying.\n\nIn a word, treat failure as a stepping stone, and success will not be far away.",
+   "structure": [
+    "开头（第 1 段）：引名言 + which means 释义 + In other words 换言强调",
+    "论证一（第 2 段前）：失败提供教训——学生改错例子",
+    "论证二（第 2 段后）：失败磨炼意志——爱迪生例子，It was... that 强调句",
+    "建议（第 3 段）：should not... Instead... 给出行动建议",
+    "结尾（第 4 段）：stepping stone 比喻收尾"
+   ],
+   "highlights": [
+    {
+     "en": "it is how we deal with failure that makes a difference",
+     "why": "强调句 It is... that... 点题，名言题万能句"
+    },
+    {
+     "en": "A student who fails an exam and carefully corrects every mistake is very likely to make progress in the next one.",
+     "why": "身边例子具体可信，定语从句拉长句子"
+    },
+    {
+     "en": "treat failure as a stepping stone, and success will not be far away",
+     "why": "祈使句+and 表条件的结尾句式，简洁有力"
+    }
+   ]
+  },
+  {
+   "id": "essay-quote-05",
+   "level": "六级",
+   "type": "名言评论类",
+   "title": "Knowledge is power",
+   "prompt": "Directions: For this part, you are allowed 30 minutes to write a short essay commenting on the saying \"Knowledge is power.\" You should write at least 150 words but no more than 200 words.",
+   "gist": "知识就是力量：知识赋予个人改变命运的能力，也推动社会进步；信息时代尤须善学善用。",
+   "body": "\"Knowledge is power\" is one of the most famous sayings in history, first popularized by Francis Bacon. Simple as the saying is, it captures a truth: knowledge transforms those who possess it into people capable of changing the world around them.\n\nThe power of knowledge works on two levels. For individuals, it is the most reliable tool for breaking the limits of birth and circumstance, allowing us to make informed choices rather than follow the crowd. For society, the spread of knowledge drives every major leap forward, from the agricultural revolution to the digital age.\n\nYuan Longping illustrates this perfectly. Armed with knowledge of genetics and a determination to fight hunger, he devoted decades to hybrid rice research. His discoveries have fed hundreds of millions of people, proving that one person's knowledge, when applied with dedication, can relieve suffering on a global scale.\n\nIn conclusion, knowledge in books is only potential power; it becomes real power when we learn it, test it, and use it for good. In an age of information, those who keep learning hold the greatest power of all.",
+   "structure": [
+    "第一段：引出名言并注明培根传播此语，释义——知识使拥有者获得改变世界的能力。",
+    "第二段：分层道理论证——个人层面打破出身局限、社会层面推动文明跃迁。",
+    "第三段：名人事例——袁隆平凭借遗传学知识研制杂交水稻，养活数亿人。",
+    "第四段：总结升华——知识是潜在的力量，唯有学习、检验、善用方成真力量。"
+   ],
+   "highlights": [
+    {
+     "en": "knowledge transforms those who possess it into people capable of changing the world around them.",
+     "why": "transform...into 结构精准有力，直接阐释名言内涵。"
+    },
+    {
+     "en": "it is the most reliable tool for breaking the limits of birth and circumstance",
+     "why": "指出知识对个体命运的突破性作用。"
+    },
+    {
+     "en": "knowledge in books is only potential power; it becomes real power when we learn it, test it, and use it for good.",
+     "why": "分号对比潜在与真实力量，三个动词排比深化结论。"
+    }
+   ]
+  },
+  {
+   "id": "essay-quote-06",
+   "level": "六级",
+   "type": "名言评论类",
+   "title": "We are what we repeatedly do（与习惯、坚持相关）",
+   "prompt": "Directions: For this part, you are allowed 30 minutes to write a short essay commenting on the saying \"We are what we repeatedly do.\" You can relate the saying to the importance of habits and persistence. You should write at least 150 words but no more than 200 words.",
+   "gist": "我们反复做的事造就了我们：卓越源于日常习惯的累积，坚持重复方能成就品格。",
+   "body": "\"We are what we repeatedly do\" is a remark often attributed to Aristotle, who connected excellence not with a single heroic act but with habits formed through daily repetition. Simple as the saying is, it overturns a misunderstanding: we are not shaped by what we occasionally accomplish, but by what we habitually practice.\n\nThe logic is compelling. One good deed does not make an honest person, just as one workout does not create a healthy body. Character, like muscle, is built through thousands of repetitions until the right action becomes second nature. Moreover, habits compound quietly: reading twenty pages a day seems trivial, yet it completes more than a dozen books a year.\n\nConsider Mo Yan. Before winning the Nobel Prize in Literature, he kept writing for decades when no one guaranteed him fame. His greatness was not the result of one lucky novel but of countless days spent repeating the discipline of writing until it defined him.\n\nIn conclusion, we should stop waiting for dramatic moments of change and instead choose our daily repetitions carefully, for in the long run, our habits write the story of who we are.",
+   "structure": [
+    "第一段：引出名言（归于亚里士多德），释义——塑造我们的不是偶发的成就而是日常习惯。",
+    "第二段：道理论证——品格如肌肉靠重复养成；习惯的复利效应，每天二十页一年十余本书。",
+    "第三段：名人事例——莫言数十年坚持写作，最终获诺贝尔文学奖。",
+    "第四段：总结升华——不必等待戏剧性改变，认真选择日常重复，习惯书写我们是谁。"
+   ],
+   "highlights": [
+    {
+     "en": "we are not shaped by what we occasionally accomplish, but by what we habitually practice.",
+     "why": "occasionally 与 habitually 对比工整，精准传达名言核心。"
+    },
+    {
+     "en": "Character, like muscle, is built through thousands of repetitions until the right action becomes second nature.",
+     "why": "肌肉类比形象，展示习惯养成的过程。"
+    },
+    {
+     "en": "our habits write the story of who we are.",
+     "why": "拟人化比喻收尾，简洁而富有余韵。"
+    }
+   ]
+  },
+  {
+   "id": "essay-quote-07",
+   "level": "六级",
+   "type": "名言评论类",
+   "title": "In the middle of difficulty lies opportunity",
+   "prompt": "Directions: For this part, you are allowed 30 minutes to write a short essay commenting on the saying \"In the middle of difficulty lies opportunity.\" You should write at least 150 words but no more than 200 words.",
+   "gist": "困难之中孕育机遇：逆境逼人创新与变革，冷静者能在危机中看见别人看不见的机会。",
+   "body": "\"In the middle of difficulty lies opportunity\" is a remark commonly associated with Albert Einstein, suggesting that adversity often conceals the seeds of progress. Simple as the saying is, it invites us to see hardship differently: a crisis is not only a wall that blocks us but also a door that pushes us toward new paths.\n\nThe idea rests on how change happens. Difficult moments strip away our comfort, forcing us to question old methods and search for better ones. Problems expose unmet needs in society, and every unmet need is a gap waiting to be filled by innovation. A calm mind in trouble can spot possibilities that fear-blinded people miss.\n\nA striking example is the rise of online education. When the pandemic forced schools to close, many saw only a disaster. Yet educators moved classes online and improved learning platforms rapidly. What began as an emergency measure has now become a lasting supplement to traditional education.\n\nIn conclusion, difficulty tests our attitude as much as our ability. If we learn to look for the opportunity hidden inside every challenge, we will find that the darkest moments often mark the beginning of our brightest progress.",
+   "structure": [
+    "第一段：引出名言（归于爱因斯坦），释义——危机既是阻挡的墙也是通往新路的门。",
+    "第二段：道理论证——困境打破舒适与自满，暴露未被满足的需求，而需求孕育创新。",
+    "第三段：具体例子——疫情停课催生在线教育，应急之举成为持久补充。",
+    "第四段：总结升华——困难考验态度与能力，至暗时刻常是光明进步的起点。"
+   ],
+   "highlights": [
+    {
+     "en": "a crisis is not only a wall that blocks us but also a door that pushes us toward new paths.",
+     "why": "墙与门的意象对比，形象化释题。"
+    },
+    {
+     "en": "every unmet need is a gap waiting to be filled by innovation.",
+     "why": "环环相扣的因果链，把困难与创新联系起来。"
+    },
+    {
+     "en": "the darkest moments often mark the beginning of our brightest progress.",
+     "why": "darkest 与 brightest 对比强烈，收尾有升华感。"
+    }
+   ]
+  },
+  {
+   "id": "essay-quote-08",
+   "level": "六级",
+   "type": "名言评论类",
+   "title": "The limits of my language mean the limits of my world",
+   "prompt": "Directions: For this part, you are allowed 30 minutes to write a short essay commenting on the saying \"The limits of my language mean the limits of my world.\" You should write at least 150 words but no more than 200 words.",
+   "gist": "语言的边界即世界的边界：语言能力决定一个人能表达和理解的范围，掌握多种语言能拓宽认知与世界。",
+   "body": "\"The limits of my language mean the limits of my world\" is a famous observation by Ludwig Wittgenstein. Simple as the saying is, it claims something bold: the size of our world is measured not only by the places we can travel to, but also by the words we can use to describe and share our experience.\n\nThe insight deserves serious thought. Language is the tool with which we carve reality into meaningful pieces; what we cannot name, we can barely notice, let alone discuss with others. Furthermore, each language carries a unique way of seeing, so learning a new language is like gaining an extra window through which the same world reveals different landscapes.\n\nMany Chinese students experience this when they learn English. Words like \"serendipity\" name feelings that have no exact equivalent in Chinese, and once we learn them, we become aware of subtle joys we previously overlooked. Our world grows not because reality changes, but because our language captures more of it.\n\nIn conclusion, we should never stop broadening our language, for every new word we master is a new piece of territory added to the map of our world.",
+   "structure": [
+    "第一段：引出名言并注明出处（维特根斯坦），释义——世界的大小也取决于语言能描述经验的范围。",
+    "第二段：道理论证——无法命名便难以察觉；每种语言是一种看世界的方式，学新语言如多开一扇窗。",
+    "第三段：学生例子——中国学生学到 serendipity、hygge 等词后察觉此前忽略的细微体验。",
+    "第四段：总结升华——不断拓宽语言即拓宽世界，每个新词都是地图上新增的领域。"
+   ],
+   "highlights": [
+    {
+     "en": "what we cannot name, we can barely notice, let alone discuss with others.",
+     "why": "层层递进揭示语言与认知的关系，哲理性强。"
+    },
+    {
+     "en": "learning a new language is like gaining an extra window through which the same world reveals different landscapes.",
+     "why": "比喻贴切，说明每种语言带来独特视角。"
+    },
+    {
+     "en": "every new word we master is a new piece of territory added to the map of our world.",
+     "why": "以地图与领土呼应全文的“边界”意象，收尾浑然一体。"
     }
    ]
   }

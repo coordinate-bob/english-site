@@ -103,6 +103,12 @@
       <div class="card">
         <h2>📄 优秀范文</h2>
         <p class="muted small">点开标题查看全文：每篇附中文大意、段落结构和可迁移的亮点句。范文为原创示例，学结构、背句型，不要整篇死背。</p>
+        <div class="learned-toolbar">
+          <select id="essay-filter">
+            <option value="all">全部体裁</option>
+          </select>
+          <span id="essay-count" class="muted small"></span>
+        </div>
         <div id="essay-list"></div>
       </div>
     </section>
@@ -119,6 +125,11 @@
         <div class="learned-toolbar">
           <select id="translation-filter">
             <option value="all">全部题材</option>
+          </select>
+          <select id="translation-level-filter">
+            <option value="all">全部级别</option>
+            <option value="四级">四级</option>
+            <option value="六级">六级</option>
           </select>
           <span id="translation-progress" class="muted small"></span>
         </div>
